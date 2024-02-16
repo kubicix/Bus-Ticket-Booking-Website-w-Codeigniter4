@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'scss/_variables.scss';
+@import 'path/to/bootstrap/scss/bootstrap';
 
 *{
     margin: 0;
@@ -79,5 +81,20 @@ nav ul .submenu li a {
     text-decoration: none;
 }
 
+/* Önceki ve Sonraki Oklarının Arkasını Yuvarlak Siyah Yapma */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: white;
 
+}
 
+/* Ok İkonlarının Rengini Ayarlama */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 200px;
+    width: 200px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: black;
+    filter: invert(1); /* Ok rengini ters çevirme */
+}
