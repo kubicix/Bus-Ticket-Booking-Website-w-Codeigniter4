@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+    <nav id="navbarContainer"></nav>
+
+    <section class="py-3 mt-3" style="background: linear-gradient(135deg, #d6e4f0, #a9c8e8); background-position: 50% 14px;">
+        <div class="container">
+            <div class="text-uppercase">
+                <h2>E-Bilet</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-30 pb-80 bg-border">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 text-center"> 
+                    <div class="text-uppercase">
+                        <h2>E-Bilet Gönder</h2>
+                    </div>
+                    <form method="post">
+                        <div class="col-md-6 mx-auto">
+                            <label for="telephoneNo" class="col-form-label">Cep Telefonu:</label>
+                            <input class="form-control" type="text" id="telephoneNo" name="telephoneNo" maxlength="10" autocomplete="off" placeholder="5XXXXXXXXX">
+                        </div>
+                        <div class="col-md-12">
+                            <center><div class="g-recaptcha mt-3" data-sitekey="6Lcc41AaAAAAAIHCGkMgRQgwdfGMOj9xdDuRq-lD"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-xk14log3unoo" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcc41AaAAAAAIHCGkMgRQgwdfGMOj9xdDuRq-lD&amp;co=aHR0cHM6Ly93d3cuZWZldHVyLmNvbS50cjo0NDM.&amp;hl=tr&amp;v=yiNW3R9jkyLVP5-EEZLDzUtA&amp;size=normal&amp;cb=rscmrglmuure"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></center>
+                        </div>
+                        <div class="col-md-12 my-3 text-center">
+                            <button type="submit" id="btnGonder" name="btnGonder" class="btn btn-primary btn-lg" style="width:200px;"><b>Gönder</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footerContainer"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footerContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
+    </script>
+
+    <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEYI_BURAYA_GIR&callback=initMap"></script>
+    <script src="js/script.js"></script>
+    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
