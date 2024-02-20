@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        .container-fluid {
+            padding: 20px;
+        }
+
+        .seat {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .empty {
+            background-color: #dbdbdb;
+        }
+
+        /* Green */
+        .selected {
+            background-color: #4acf50;
+        }
+
+        /* Blue */
+        .occupied {
+            background-color: #f44336;
+        }
+
+        /* Red */
+    </style>
+</head>
+
+<body>
+    <nav id="navbarContainer"></nav>
+
+    <div class="container bg-light p-4 rounded my-4">
+        <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
+                    <select class="form-select" id="kalkisNoktasi" aria-label="Kalkış Noktası">
+                        <option selected>İstanbul</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="antalya">Antalya</option>
+                        <option value="kocaeli">Kocaeli</option>
+                        <option value="edirne">Edirne</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
+                    <select class="form-select" id="varisNoktasi" aria-label="Varış Noktası">
+                        <option selected>İstanbul</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="antalya">Antalya</option>
+                        <option value="kocaeli">Kocaeli</option>
+                        <option value="edirne">Edirne</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
+                    <input type="datetime-local" class="form-control" id="tarih">
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                    <button type="submit" class="btn btn-light">Seferleri Listele</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container ">
+        <div class="d-flex flex-wrap bg-light">
+            <!-- Bus seat map -->
+            <div class="row ">
+                <div class="col-6 ">
+                    <div class="row ">
+                        <div class="col ">
+
+                        </div>
+                        <!-- Add more seat divs here -->
+                    </div>
+                </div>
+                <!-- Add more columns and rows here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const seatsContainer = document.querySelector('.container .d-flex');
+            const totalSeats = 20; // Change this to the total number of seats on the bus
+            let selectedSeat = null; // Variable to store the currently selected seat
+
+            // Create and append seat elements
+            for (let i = 1; i <= totalSeats; i++) {
+                const seat = document.createElement('div');
+                seat.classList.add('seat', 'empty');
+                seat.textContent = i;
+                seat.addEventListener('click', function () {
+                    if (seat.classList.contains('occupied')) {
+                        alert('This seat is already occupied!');
+                    } else {
+                        // Remove 'selected' class from previously selected seat (if any)
+                        if (selectedSeat !== null) {
+                            selectedSeat.classList.remove('selected');
+                        }
+                        // Toggle 'selected' class for the clicked seat
+                        seat.classList.toggle('selected');
+                        // Update the selectedSeat variable
+                        selectedSeat = seat.classList.contains('selected') ? seat : null;
+                    }
+                });
+                seatsContainer.appendChild(seat);
+            }
+
+            // Mark some seats as occupied (for demonstration purposes)
+            const occupiedSeats = [5, 10, 15]; // Change this array to the seat numbers that are occupied
+            occupiedSeats.forEach(seatNumber => {
+                const seat = document.querySelector(`.seat:nth-child(${seatNumber})`);
+                seat.classList.remove('empty');
+                seat.classList.add('occupied');
+            });
+        });
+
+    </script>
+
+    <div id="footerContainer"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footerContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
+    </script>
+
+
+    <script>
+        // Navbar'ı yükle
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
+    </script>
+
+</body>
+
+</html>
