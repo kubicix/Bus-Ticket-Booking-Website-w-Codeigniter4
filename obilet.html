@@ -245,11 +245,11 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
-                <form>
+                <form id="myForm">
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
-                            <select class="form-select" id="kalkisNoktasi" aria-label="Kalkış Noktası">
+                            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi" aria-label="Kalkış Noktası">
                                 <option selected>İstanbul</option>
                                 <option value="izmir">İzmir</option>
                                 <option value="ankara">Ankara</option>
@@ -260,7 +260,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
-                            <select class="form-select" id="varisNoktasi" aria-label="Varış Noktası">
+                            <select class="form-select" name="varisNoktasi" id="varisNoktasi" aria-label="Varış Noktası">
                                 <option selected>İstanbul</option>
                                 <option value="izmir">İzmir</option>
                                 <option value="ankara">Ankara</option>
@@ -273,7 +273,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
-                            <input type="datetime-local" class="form-control" id="tarih">
+                            <input type="date" class="form-control" id="tarih">
                         </div>
                         <div class="col-md-6 d-flex align-items-end">
                             <button type="submit" class="btn btn-success">Seferleri Listele</button>
@@ -323,14 +323,76 @@
                     <!-- JavaScript le koltukların eklendiği kısım -->
                 </ol>
                 <div class="exit exit--back fuselage"></div>
+                <button class="btn btn-success btn-lg mb-3" id="buyButton">Bileti Satın Al</button>
             </div>
-        
+            <div>
+                
+            </div>
         </div>
     </div>
 
-   
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buyButton = document.querySelector('#buyButton');
+    
+            buyButton.addEventListener('click', function() {
+                const checkedSeats = document.querySelectorAll('.seat input[type="checkbox"]:checked');
+                const checkedSeatIds = Array.from(checkedSeats).map(seat => seat.id);
+    
+                // Seçili koltuk bilgilerini JSON formatına dönüştürme
+                const jsonData = JSON.stringify(checkedSeatIds);
+    
+                // JSON verisini localStorage'a kaydetme
+                localStorage.setItem('selectedSeats', jsonData);
+    
+                
+            });
+        });
+    </script>
+    
+    
+    <!-- ödeme sayfasına bilet bilgileri gönderme -->
+    <form id="myForm">
+        <input type="text" name="kalkisNoktasi" value="İstanbul">
+        <input type="text" name="varisNoktasi" value="Ankara">
+        <!-- Diğer form alanları buraya gelecek -->
+    </form>
+    
+    <button class="btn btn-success btn-lg mb-3" id="buyButton">Bileti Satın Al</button>
+    
+    <script>
+        document.getElementById('buyButton').addEventListener('click', function(event) {
+            // Form verilerini JSON formatına dönüştürme
+            const formData = {
+                kalkisNoktasi: document.querySelector('#kalkisNoktasi').value,
+                varisNoktasi: document.querySelector('#varisNoktasi').value,
+                // Tarih bilgisini formatlamak için
+                seferTarihi: formatDate(new Date(document.querySelector('#tarih').value)),
+                // Diğer form alanları buraya eklenebilir
+            };
+    
+            // JSON verisini diğer sayfaya gönderme
+            const jsonString = JSON.stringify(formData);
+            localStorage.setItem('formData', jsonString);
+    
+            // Diğer sayfaya yönlendirme
+            window.location.href = 'obilet2.html';
+        });
+    
+        // Tarih formatını ayarlayan fonksiyon
+        function formatDate(date) {
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            return date.toLocaleDateString('tr-TR', options);
+        }
+    </script>
+    
+    
+    
     
 
+   
+    
+    <!-- Koltuk oluşturma -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cabin = document.querySelector(".cabin");
