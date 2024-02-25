@@ -23,12 +23,15 @@
                 $result = mysqli_query($conn, $sql);
 
                 if($result){
-                    $msg = "<div class = 'alert alert-success'>Kayıt başarılı şekilde tamamlanmıştır.</div>";
+                    $successMsg = "Kayıt başarılı.";
+                    echo '<script type="text/javascript">';
+                    echo 'setTimeout(function () { window.location.href = "account.php"; }, 700);';
+                    echo '</script>';
                 } else{
-                    $msg = "<div class = 'alert alert-danger'>Bir şeyler yanlış gitti.</div>";
+                    $errorMsg = "Kayıt başarısız. Girdiğiniz bilgileri kontrol edin.";
                 }
             } else {
-                $msg = "<div class = 'alert alert-danger'>Şifreler eşleşmiyor.</div>";
+                $errorMsg2 = "Şifreler Eşleşmiyor.";
             }
                 
         }
@@ -60,7 +63,15 @@
             </div>
         </div>
     </section>
-
+    <?php
+            if(isset($successMsg)){
+                echo "<div class='alert alert-success'>$successMsg</div>";
+            } elseif(isset($errorMsg)){
+                echo "<div class='alert alert-danger'>$errorMsg</div>";
+            } elseif(isset($errorMsg2)){
+                echo "<div class='alert alert-danger'>$errorMsg2</div>";
+            }
+    ?>
     <section class="pt-30 pb-80 bg-border">
         <div class="container">
             <div class="row">

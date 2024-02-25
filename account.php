@@ -1,3 +1,26 @@
+<?php
+
+
+    include 'config.php';
+
+    if(isset($_POST['submit'])){
+        $CepTelefon = mysqli_real_escape_string($conn, $_POST['CepTelefon']);
+        $Sifre = mysqli_real_escape_string($conn, $_POST['Sifre']);
+        $query = "SELECT * FROM users WHERE CepTelefon = '$CepTelefon' AND Sifre = '$Sifre'";
+        $result = mysqli_query($conn, $query);
+
+        if(mysqli_num_rows($result) > 0){
+            $successMsg = "Giriş başarılı.";
+            echo '<script type="text/javascript">';
+            echo 'setTimeout(function () { window.location.href = "index.php"; }, 700);';
+            echo '</script>';
+        } else {
+            $errorMsg = "Giriş başarısız. Cep telefonu veya şifre yanlış.";
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -22,59 +45,35 @@
             </div>
         </div>
     </section>
-
+    <?php
+            if(isset($successMsg)){
+                echo "<div class='alert alert-success'>$successMsg</div>";
+            } elseif(isset($errorMsg)){
+                echo "<div class='alert alert-danger'>$errorMsg</div>";
+            }
+    ?>
     <section class="pt-30 pb-80 bg-border">
         <div class="container">
             <div id="hesabim" class="row">
-                <form id="frm" name="frm" method="post" action="SatinAlinanBilet.php">
+                <form method="POST" action="">
                     <div class="col-xs-4 uo">
                         <h5>ÜYELİK OTURUMU</h5><br>
                         <div class="col-md-10">
                             <label>Cep Telefonu: </label>
-                            <input type="text" class="form-control" id="LgnUyeNo" name="LgnUyeNo" maxlength="10" onkeyup="isCepTel(this.id);" onkeydown="isCepTel(this.id);" placeholder="Üye Cep No" autocomplete="off">
+                            <input type="text" class="form-control" id="CepTelefon" name="CepTelefon" maxlength="10"  placeholder="Üye Cep No" autocomplete="off">
                         </div><br>
                         <div class="col-md-10">
                             <label>Şifre: </label>
-                            <input type="password" class="form-control" id="LgnSifre" name="LgnSifre" placeholder="Üye Şifre" autocomplete="off">
+                            <input type="password" class="form-control" id="Sifre" name="Sifre" placeholder="Üye Şifre" autocomplete="off">
                         </div><br>
                         <div class="col-md-12">
                             <p style="text-align: left;"><a href="resetPassword.html">Şifremi Unuttum</a></p>
                         </div>
                         <div class="col-md-12">
                             <a href="register.html" class="btn btn-default pull-left" style="background-color: rgb(206, 204, 204);">Üye Ol</a>
-                            <button type="button" id="hesabimGir" class="btn btn-primary pull-right" onclick="OturumAc()">Oturum Aç</button>
+                            <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Oturum Aç</button>
                         </div>
                     </div>
-                <input type="hidden" id="EventControl" name="EventControl" autocomplete="off">
-                    <br><br>
-               </form>
-
-               <form id="frm2" name="frm2" method="post" action="SatinAlinanBiletListe.php">     
-                    <div class="col-xs-8 uosab">
-                        <h5>ÜYE OLMADAN SATIN ALINAN BİLETLER</h5><br>
-                        <div class="form-horizontal">
-                            <div class="col-md-12 nopadding">
-                                <label class="control-label col-sm-4">PNR NO</label>
-                                <div class="col-sm-3">
-                                  <input type="text" id="PnrNo" name="PnrNo" class="form-control" value="" autocomplete="off">
-                                </div>
-                            </div><br>
-                            <div class="col-md-12 nopadding mt-20">
-                                <label class="control-label col-sm-4">Bilet alırken belirttiğiniz GSM numaranız </label>
-                                <div class="col-sm-3">
-                                  <input type="text" name="CepTelefon" class="form-control" autocomplete="off">
-                                  <small class="pull-right">Örn: 5420000000</small>
-                                </div>
-                            </div><br>
-                            <div class="col-md-10 mt-20">
-                                <button type="button" class="btn btn-primary pull-right" onclick="UyeliksizListe()">Gönder</button>
-                            </div>
-                            <div class="col-md-12 nopadding mt-20">
-                                <small style="font-size: 13px;">Yolcularımıza daha kolay ulaşmak için Üye olmadan satın alınan biletler için GSM numarası kullanılmaktadır.</small>
-                            </div>
-                        </div>
-                    </div>
-                  <input type="hidden" id="EventControl" name="EventControl" autocomplete="off">  
                 </form>
             </div>
         </div>
