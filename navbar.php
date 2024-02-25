@@ -36,8 +36,3 @@
         </li>
     </ul>
     <h2 class="text-success">📞4141 414 41 41 📞</h2>
-    <?php
-    // index.php'ye yönlendirme
-    header("Location: index.php");
-    exit; // Yönlendirme yapıldıktan sonra diğer işlemleri durdurmak için
-    ?>
