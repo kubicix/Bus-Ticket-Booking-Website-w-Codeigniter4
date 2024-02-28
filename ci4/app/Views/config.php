@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","bus",3307);
+$conn = mysqli_connect("localhost","root","","bus",3308);
 
 if (!$conn)  {
     echo"Bağlatnı Başarısız";

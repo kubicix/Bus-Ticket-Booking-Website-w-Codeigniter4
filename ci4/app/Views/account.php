@@ -1,23 +1,10 @@
 <?php
+    session_start();
+    include("config.php");
+    
+    // Eğer bir giriş denemesi yapılmışsa ve hata mesajı varsa, bu mesajı al ve temizle
+    $errorMessage = isset($_SESSION['message']) ? $_SESSION['message'] : '';
 
-
-    include 'config.php';
-
-    if(isset($_POST['submit'])){
-        $CepTelefon = mysqli_real_escape_string($conn, $_POST['CepTelefon']);
-        $Sifre = mysqli_real_escape_string($conn, $_POST['Sifre']);
-        $query = "SELECT * FROM users WHERE CepTelefon = '$CepTelefon' AND Sifre = '$Sifre'";
-        $result = mysqli_query($conn, $query);
-
-        if(mysqli_num_rows($result) > 0){
-            $successMsg = "Giriş başarılı.";
-            echo '<script type="text/javascript">';
-            echo 'setTimeout(function () { window.location.href = "index.php"; }, 700);';
-            echo '</script>';
-        } else {
-            $errorMsg = "Giriş başarısız. Cep telefonu veya şifre yanlış.";
-        }
-    }
 ?>
 
 
@@ -46,16 +33,17 @@
         </div>
     </section>
     <?php
-            if(isset($successMsg)){
-                echo "<div class='alert alert-success'>$successMsg</div>";
-            } elseif(isset($errorMsg)){
-                echo "<div class='alert alert-danger'>$errorMsg</div>";
+            if(!$errorMessage == ''){
+                echo "<div class='alert alert-danger'>".$errorMessage."</div>";
+                unset($_SESSION["message"]);
+            } elseif(isset($_SESSION['message'])){
+                echo "<div class='alert alert-danger'>".$errorMessage."</div>";
             }
     ?>
     <section class="pt-30 pb-80 bg-border">
         <div class="container">
             <div id="hesabim" class="row">
-                <form method="POST" action="">
+                <form method="POST" action="authcode.php">
                     <div class="col-xs-4 uo">
                         <h5>ÜYELİK OTURUMU</h5><br>
                         <div class="col-md-10">
@@ -71,7 +59,7 @@
                         </div>
                         <div class="col-md-12">
                             <a href="register.html" class="btn btn-default pull-left" style="background-color: rgb(206, 204, 204);">Üye Ol</a>
-                            <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Oturum Aç</button>
+                            <button type="submit" id="login_btn" name="login_btn" class="btn btn-primary pull-right">Oturum Aç</button>
                         </div>
                     </div>
                 </form>

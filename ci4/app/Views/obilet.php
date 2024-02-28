@@ -235,6 +235,12 @@
             -webkit-animation-name: rubberBand;
             animation-name: rubberBand;
         }
+
+        .table th, .table td {
+        white-space: nowrap; /* Metnin satır sonunda kesilmesini engeller */
+        overflow: hidden; /* Taşan metnin gizlenmesini sağlar */
+        text-overflow: ellipsis; /* Taşan metnin üç nokta (...) ile kısaltılmasını sağlar */
+    }
     </style>
 </head>
 
@@ -245,12 +251,13 @@
         <div class="row">
             <div class="col-md-6">
                 <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
-                <form id="myForm">
+                <form id="myForm" method="post">
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
-                            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi" aria-label="Kalkış Noktası">
-                                <option selected>İstanbul</option>
+                            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi"
+                                aria-label="Kalkış Noktası">
+                                <option value="istanbul" selected>İstanbul</option>
                                 <option value="izmir">İzmir</option>
                                 <option value="ankara">Ankara</option>
                                 <option value="antalya">Antalya</option>
@@ -260,8 +267,9 @@
                         </div>
                         <div class="col-md-6">
                             <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
-                            <select class="form-select" name="varisNoktasi" id="varisNoktasi" aria-label="Varış Noktası">
-                                <option selected>İstanbul</option>
+                            <select class="form-select" name="varisNoktasi" id="varisNoktasi"
+                                aria-label="Varış Noktası">
+                                <option value="istanbul" selected>İstanbul</option>
                                 <option value="izmir">İzmir</option>
                                 <option value="ankara">Ankara</option>
                                 <option value="antalya">Antalya</option>
@@ -273,10 +281,10 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
-                            <input type="date" class="form-control" id="tarih">
+                            <input type="date" class="form-control" id="tarih" name="tarih">
                         </div>
                         <div class="col-md-6 d-flex align-items-end">
-                            <button type="submit" class="btn btn-success">Seferleri Listele</button>
+                            <button type="submit" class="btn btn-success" name="submit">Seferleri Listele</button>
                         </div>
                     </div>
                 </form>
@@ -285,36 +293,74 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>Yön</th>
-                                <th>Saat</th>
-                                <th>Firma</th>
-                                <th>Model</th>
-                                <th>Araç Özellikleri</th>
+                                <th>Kalkış-Varış</th>
+                                <th>Plaka</th>
+                                <th>Tarih</th>
                                 <th>Fiyat</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Gidiş</td>
-                                <td>08:00</td>
-                                <td><img src="img/logo-seffaf.png" style="height: 100px;" alt=""></td>
-                                <td>20+20</td>
-                                <td>(MOLASIZ) WIFI TV 220V PRIZ ANDROID</td>
-                                <td>310.00</td>
-                            </tr>
-                            <tr>
-                                <td>Gidiş</td>
-                                <td>11:05</td>
-                                <td><img src="img/logo-seffaf.png" style="height: 100px;" alt=""></td>
-                                <td>20+20</td>
-                                <td>(MOLASIZ) WIFI TV 220V PRIZ ANDROID</td>
-                                <td>310.00</td>
-                            </tr>
+                            <?php
+                            if (isset($_POST['submit'])) {
+                                // Formdan gelen verileri alma
+                                $kalkisNoktasi = $_POST['kalkisNoktasi'];
+                                $varisNoktasi = $_POST['varisNoktasi'];
+                                $tarih = $_POST['tarih'];
+
+                                // Formdan gelen verileri kontrol etmek için
+                                // echo "Kalkış Noktası: " . $kalkisNoktasi . "<br>";
+                                // echo "Varış Noktası: " . $varisNoktasi . "<br>";
+                                // echo "Tarih: " . $tarih . "<br>";
+
+                                // Veritabanı bağlantısı için gerekli bilgiler
+                                $servername = "localhost";
+                                $username = "root"; // Veritabanı kullanıcı adı
+                                $password = ""; // Veritabanı şifresi
+                                $dbname = "bus"; // Kullanılan veritabanı adı
+                            
+                                // Veritabanı bağlantısını oluşturma
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                                // Bağlantıyı kontrol etme
+                                if ($conn->connect_error) {
+                                    die("Veritabanına bağlanılamadı: " . $conn->connect_error);
+                                }
+
+                                // SQL sorgusunu oluşturma
+                                $sql = "SELECT * FROM seferler WHERE kalkis_yeri = '$kalkisNoktasi' AND varis_yeri = '$varisNoktasi'";
+
+
+                                // SQL sorgusunu çalıştırma ve sonuçları alma
+                                $result = $conn->query($sql);
+
+                                // Sonuçları işleme ve ekrana yazdırma
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row["kalkis_yeri"] . " / " . $row["varis_yeri"] . "</td>";
+                                        echo "<td>" . $row["otobus_plaka"] . "</td>";
+                                        echo "<td>" . $row["sefer_tarih"] . "</td>";
+                                        echo "<td>" . $row["sefer_fiyat"] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo '<tr><td colspan="4">Sefer bulunamadı.</td></tr>';
+                                }
+
+                                // Veritabanı bağlantısını kapatma
+                                $conn->close();
+                            }
+                            ?>
+
                         </tbody>
                     </table>
                 </div>
             </div>
-        
+
+
+
+
             <div class="bus"
                 style="border: 10px solid #b0b0b0; border-radius: 25px; width: 300px; margin: 20px auto; text-align: center;">
                 <h1 style="margin-top: 20px;">Koltuk Seçimi</h1>
@@ -326,35 +372,35 @@
                 <button class="btn btn-success btn-lg mb-3" id="buyButton">Bileti Satın Al</button>
             </div>
             <div>
-                
+
             </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const buyButton = document.querySelector('#buyButton');
-    
-            buyButton.addEventListener('click', function() {
+
+            buyButton.addEventListener('click', function () {
                 const checkedSeats = document.querySelectorAll('.seat input[type="checkbox"]:checked');
                 const checkedSeatIds = Array.from(checkedSeats).map(seat => seat.id);
-    
+
                 // Seçili koltuk bilgilerini JSON formatına dönüştürme
                 const jsonData = JSON.stringify(checkedSeatIds);
-    
+
                 // JSON verisini localStorage'a kaydetme
                 localStorage.setItem('selectedSeats', jsonData);
-    
-                
+
+
             });
         });
     </script>
-    
-    
-    
-    
+
+
+
+
     <script>
-        document.getElementById('buyButton').addEventListener('click', function(event) {
+        document.getElementById('buyButton').addEventListener('click', function (event) {
             // Form verilerini JSON formatına dönüştürme
             const formData = {
                 kalkisNoktasi: document.querySelector('#kalkisNoktasi').value,
@@ -363,28 +409,28 @@
                 seferTarihi: formatDate(new Date(document.querySelector('#tarih').value)),
                 // Diğer form alanları buraya eklenebilir
             };
-    
+
             // JSON verisini diğer sayfaya gönderme
             const jsonString = JSON.stringify(formData);
             localStorage.setItem('formData', jsonString);
-    
+
             // Diğer sayfaya yönlendirme
             window.location.href = 'obilet2.html';
         });
-    
+
         // Tarih formatını ayarlayan fonksiyon
         function formatDate(date) {
             const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
             return date.toLocaleDateString('tr-TR', options);
         }
     </script>
-    
-    
-    
-    
 
-   
-    
+
+
+
+
+
+
     <!-- Koltuk oluşturma -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
