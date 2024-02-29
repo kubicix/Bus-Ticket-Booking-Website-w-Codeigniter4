@@ -93,7 +93,7 @@
 
             input[type=checkbox]:checked {
                 +label {
-                    background: #bada55;
+                    background: #25a5f4;
                     -webkit-animation-name: rubberBand;
                     animation-name: rubberBand;
                     animation-duration: 300ms;
@@ -103,7 +103,7 @@
 
             input[type=checkbox]:disabled {
                 +label {
-                    background: #dddddd;
+                    background: #db2c2c;
                     text-indent: -9999px;
                     overflow: hidden;
 
@@ -132,7 +132,8 @@
                 font-weight: bold;
                 line-height: 1.5rem;
                 padding: 4px 0;
-                background: #25a5f4;
+
+                background: #bada55;
                 border-radius: 5px;
                 animation-duration: 300ms;
                 animation-fill-mode: both;
@@ -236,11 +237,15 @@
             animation-name: rubberBand;
         }
 
-        .table th, .table td {
-        white-space: nowrap; /* Metnin satır sonunda kesilmesini engeller */
-        overflow: hidden; /* Taşan metnin gizlenmesini sağlar */
-        text-overflow: ellipsis; /* Taşan metnin üç nokta (...) ile kısaltılmasını sağlar */
-    }
+        .table th,
+        .table td {
+            white-space: nowrap;
+            /* Metnin satır sonunda kesilmesini engeller */
+            overflow: hidden;
+            /* Taşan metnin gizlenmesini sağlar */
+            text-overflow: ellipsis;
+            /* Taşan metnin üç nokta (...) ile kısaltılmasını sağlar */
+        }
     </style>
 </head>
 
@@ -297,7 +302,9 @@
                                 <th>Plaka</th>
                                 <th>Tarih</th>
                                 <th>Fiyat</th>
-                                
+                                <th>Firma</th>
+                                <th>Koltuk Listesi</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -312,7 +319,7 @@
                                 // echo "Kalkış Noktası: " . $kalkisNoktasi . "<br>";
                                 // echo "Varış Noktası: " . $varisNoktasi . "<br>";
                                 // echo "Tarih: " . $tarih . "<br>";
-
+                            
                                 // Veritabanı bağlantısı için gerekli bilgiler
                                 $servername = "localhost";
                                 $username = "root"; // Veritabanı kullanıcı adı
@@ -342,6 +349,8 @@
                                         echo "<td>" . $row["otobus_plaka"] . "</td>";
                                         echo "<td>" . $row["sefer_tarih"] . "</td>";
                                         echo "<td>" . $row["sefer_fiyat"] . "</td>";
+                                        echo "<td>" . '<img src="img/logo-seffaf.png" style="height: 100px;" alt="">' . "</td>";
+                                        echo '<td><button type="button" class="btn btn-success" onclick="getKoltukListesi(\'' . $row["otobus_plaka"] . '\', \'' . $row["sefer_tarih"] . '\')">Koltuk Listesi Getir</button></td>';
                                         echo "</tr>";
                                     }
                                 } else {
@@ -376,6 +385,51 @@
             </div>
         </div>
     </div>
+
+    <script>
+function getKoltukListesi(plaka, tarih) {
+    // AJAX ile koltuk listesi sorgusu yapılacak
+    var xhr = new XMLHttpRequest();
+    var url = "get_koltuk_listesi.php"; // Koltuk listesini getiren PHP dosyasının yolu
+
+    // İstek yapıldığında çalışacak fonksiyon
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Başarılı istek durumunda gelen verileri işleme
+            var koltukListesi = JSON.parse(xhr.responseText);
+            // Koltuk listesini işleme
+            koltukListesiniIsle(koltukListesi);
+        }
+    };
+
+    // POST isteği ayarları
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // POST isteği gövdesi (istek için gerekli parametreler)
+    var params = "plaka=" + plaka + "&tarih=" + tarih;
+    xhr.send(params);
+}
+
+function koltukListesiniIsle(koltukListesi) {
+    // Koltuk listesini işleme
+    koltukListesi.forEach(function(koltuk) {
+        var koltukElement = document.getElementById( koltuk.koltuk_no);
+        if (koltuk.is_bought == 1) {
+            // Koltuk satın alınmışsa kırmızıya boyayıp devre dışı bırak
+            
+            koltukElement.disabled = true;
+            koltukElement.style.backgroundColor = "red";
+        } else {
+            // Koltuk satın alınmamışsa maviye boyayıp devre dışı bırakma
+            
+            koltukElement.disabled = true;
+            koltukElement.style.backgroundColor = "blue";
+        }
+    });
+}
+</script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
