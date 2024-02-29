@@ -158,6 +158,8 @@
             }
         }
 
+
+
         @-webkit-keyframes rubberBand {
             0% {
                 -webkit-transform: scale3d(1, 1, 1);
@@ -257,42 +259,41 @@
             <div class="col-md-6">
                 <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
                 <form id="myForm" method="post">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
-                            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi"
-                                aria-label="Kalkış Noktası">
-                                <option value="istanbul" selected>İstanbul</option>
-                                <option value="izmir">İzmir</option>
-                                <option value="ankara">Ankara</option>
-                                <option value="antalya">Antalya</option>
-                                <option value="kocaeli">Kocaeli</option>
-                                <option value="edirne">Edirne</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
-                            <select class="form-select" name="varisNoktasi" id="varisNoktasi"
-                                aria-label="Varış Noktası">
-                                <option value="istanbul" selected>İstanbul</option>
-                                <option value="izmir">İzmir</option>
-                                <option value="ankara">Ankara</option>
-                                <option value="antalya">Antalya</option>
-                                <option value="kocaeli">Kocaeli</option>
-                                <option value="edirne">Edirne</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
-                            <input type="date" class="form-control" id="tarih" name="tarih">
-                        </div>
-                        <div class="col-md-6 d-flex align-items-end">
-                            <button type="submit" class="btn btn-success" name="submit">Seferleri Listele</button>
-                        </div>
-                    </div>
-                </form>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
+            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi" aria-label="Kalkış Noktası">
+                <option value="istanbul" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'istanbul') echo 'selected'; ?>>İstanbul</option>
+                <option value="izmir" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'izmir') echo 'selected'; ?>>İzmir</option>
+                <option value="ankara" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'ankara') echo 'selected'; ?>>Ankara</option>
+                <option value="antalya" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'antalya') echo 'selected'; ?>>Antalya</option>
+                <option value="kocaeli" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'kocaeli') echo 'selected'; ?>>Kocaeli</option>
+                <option value="edirne" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'edirne') echo 'selected'; ?>>Edirne</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
+            <select class="form-select" name="varisNoktasi" id="varisNoktasi" aria-label="Varış Noktası">
+                <option value="istanbul" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'istanbul') echo 'selected'; ?>>İstanbul</option>
+                <option value="izmir" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'izmir') echo 'selected'; ?>>İzmir</option>
+                <option value="ankara" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'ankara') echo 'selected'; ?>>Ankara</option>
+                <option value="antalya" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'antalya') echo 'selected'; ?>>Antalya</option>
+                <option value="kocaeli" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'kocaeli') echo 'selected'; ?>>Kocaeli</option>
+                <option value="edirne" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'edirne') echo 'selected'; ?>>Edirne</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
+            <input type="date" class="form-control" id="tarih" name="tarih" value="<?php echo isset($_POST['tarih']) ? $_POST['tarih'] : ''; ?>">
+        </div>
+        <div class="col-md-6 d-flex align-items-end">
+            <button type="submit" class="btn btn-success" name="submit">Seferleri Listele</button>
+        </div>
+    </div>
+</form>
+
                 <div class="col-md-6">
                     <h2 class="text-dark mb-4">Seferler</h2>
                     <table class="table table-bordered">
@@ -350,7 +351,7 @@
                                         echo "<td>" . $row["sefer_tarih"] . "</td>";
                                         echo "<td>" . $row["sefer_fiyat"] . "</td>";
                                         echo "<td>" . '<img src="img/logo-seffaf.png" style="height: 100px;" alt="">' . "</td>";
-                                        echo '<td><button type="button" class="btn btn-success" onclick="getKoltukListesi(\'' . $row["otobus_plaka"] . '\', \'' . $row["sefer_tarih"] . '\')">Koltuk Listesi Getir</button></td>';
+                                        echo '<td><button type="button" class="btn btn-success" onclick="getKoltukListesi(\'' . $row["otobus_plaka"] . '\', \'' . $row["sefer_tarih"] . '\'); getRowData(this)">Koltuk Listesi Getir</button></td>';
                                         echo "</tr>";
                                     }
                                 } else {
@@ -387,50 +388,38 @@
     </div>
 
     <script>
-function getKoltukListesi(plaka, tarih) {
-    // AJAX ile koltuk listesi sorgusu yapılacak
-    var xhr = new XMLHttpRequest();
-    var url = "get_koltuk_listesi.php"; // Koltuk listesini getiren PHP dosyasının yolu
+    function getRowData(button) {
+        var row = button.closest('tr');
+        var cells = row.getElementsByTagName('td');
+        var kalkisVaris = cells[0].textContent;
+        var otobusPlaka = cells[1].textContent;
+        var seferTarih = cells[2].textContent;
+        var seferFiyat = cells[3].textContent;
 
-    // İstek yapıldığında çalışacak fonksiyon
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Başarılı istek durumunda gelen verileri işleme
-            var koltukListesi = JSON.parse(xhr.responseText);
-            // Koltuk listesini işleme
-            koltukListesiniIsle(koltukListesi);
-        }
-    };
+        // Form verilerini JSON formatına dönüştürme
+        const formData = {
+            kalkisVaris: kalkisVaris,
+            otobusPlaka: otobusPlaka,
+            seferTarih: seferTarih,
+            seferFiyat: seferFiyat
+            // Diğer form alanları buraya eklenebilir
+        };
 
-    // POST isteği ayarları
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // JSON verisini localStorage'a kaydetme
+        localStorage.setItem('rowData', JSON.stringify(formData));
 
-    // POST isteği gövdesi (istek için gerekli parametreler)
-    var params = "plaka=" + plaka + "&tarih=" + tarih;
-    xhr.send(params);
-}
-
-function koltukListesiniIsle(koltukListesi) {
-    // Koltuk listesini işleme
-    koltukListesi.forEach(function(koltuk) {
-        var koltukElement = document.getElementById( koltuk.koltuk_no);
-        if (koltuk.is_bought == 1) {
-            // Koltuk satın alınmışsa kırmızıya boyayıp devre dışı bırak
-            
-            koltukElement.disabled = true;
-            koltukElement.style.backgroundColor = "red";
-        } else {
-            // Koltuk satın alınmamışsa maviye boyayıp devre dışı bırakma
-            
-            koltukElement.disabled = true;
-            koltukElement.style.backgroundColor = "blue";
-        }
-    });
-}
+        // Bilgileri ekrana yazdırma
+        console.log("Kalkış-Varış: " + kalkisVaris);
+        console.log("Otobüs Plaka: " + otobusPlaka);
+        console.log("Sefer Tarihi: " + seferTarih);
+        console.log("Sefer Fiyatı: " + seferFiyat);
+    }
 </script>
 
 
+    
+
+    <!-- koltukları diğer sayfaya gönderim için js kodu -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const buyButton = document.querySelector('#buyButton');
@@ -450,9 +439,9 @@ function koltukListesiniIsle(koltukListesi) {
         });
     </script>
 
+    
 
-
-
+    <!-- form bilgilerini diğer sayfaya gönderim için js kodu -->
     <script>
         document.getElementById('buyButton').addEventListener('click', function (event) {
             // Form verilerini JSON formatına dönüştürme
@@ -481,9 +470,54 @@ function koltukListesiniIsle(koltukListesi) {
 
 
 
+    <!-- Ajax ile sefere ait koltuk listesi getir butonuyla birlikte koltukların çekilme kodu  -->
+    <script>
+        function getKoltukListesi(plaka, tarih) {
+            // AJAX ile koltuk listesi sorgusu yapılacak
+            var xhr = new XMLHttpRequest();
+            var url = "get_koltuk_listesi.php"; // Koltuk listesini getiren PHP dosyasının yolu
 
+            // İstek yapıldığında çalışacak fonksiyon
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Başarılı istek durumunda gelen verileri işleme
+                    var koltukListesi = JSON.parse(xhr.responseText);
+                    // Koltuk listesini işleme
+                    koltukListesiniIsle(koltukListesi);
+                }
+            };
 
+            // POST isteği ayarları
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
+            // POST isteği gövdesi (istek için gerekli parametreler)
+            var params = "plaka=" + plaka + "&tarih=" + tarih;
+            xhr.send(params);
+        }
+
+        function koltukListesiniIsle(koltukListesi) {
+            // Koltuk listesini işleme
+            koltukListesi.forEach(function (koltuk) {
+                var koltukElement = document.getElementById(koltuk.koltuk_no);
+                if (koltuk.is_bought == 1) {
+                    // Koltuk satın alınmışsa kırmızıya boyayıp devre dışı bırak
+                    koltukElement.disabled = true;
+                    koltukElement.style.backgroundColor = "red";
+                    koltukElement.style.setProperty("background", "red", "important");
+                    
+                } else {
+                    // Koltuk satın alınmamışsa maviye boyayıp devre dışı bırakma
+                    koltukElement.disabled = true;
+                    koltukElement.style.backgroundColor = "blue";
+                    koltukElement.style.setProperty("background", "blue", "important");
+                }
+
+            });
+        }
+    </script>
+
+    
 
     <!-- Koltuk oluşturma -->
     <script>
@@ -545,6 +579,8 @@ function koltukListesiniIsle(koltukListesi) {
             })
             .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
     </script>
+
+
 
 
     <script>

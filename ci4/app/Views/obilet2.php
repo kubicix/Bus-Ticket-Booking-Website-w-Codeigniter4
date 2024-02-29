@@ -26,6 +26,7 @@
                 <h2 class="font-weight-bold">Bilet Bilgileri</h2>
                 <p><strong>Kalkış Noktası:</strong> <span id="kalkisNoktasi"></span></p>
                 <p><strong>Varış Noktası:</strong> <span id="varisNoktasi"></span></p>
+                <p><strong>Otobüs Plakası:</strong> <span id="otobusPlaka"></span></p>
                 <p><strong>Sefer Tarihi:</strong> <span id="seferTarihi"></span></p>
                 <p><strong>Satın Alınan Koltuklar:</strong> <span id="satınAlınanKoltuklar"></span></p>
                 <p><strong class="font-weight-bold h2">TOPLAM:</strong> <span id="fiyat" class="font-weight-bold h2 text-danger"></span></p>
@@ -42,14 +43,17 @@
         
         // localStorage'da formData anahtarına sahip veriyi al
         const jsonString = window.localStorage.getItem('formData');
+        const jsonString2 = window.localStorage.getItem('rowData');
         
         // JSON verisini parse et
         const formData = JSON.parse(jsonString);
+        const formData2 = JSON.parse(jsonString2);
         
         // Form verilerini kullanarak istediğiniz işlemleri yapın
         document.getElementById('kalkisNoktasi').textContent = formData.kalkisNoktasi;
         document.getElementById('varisNoktasi').textContent = formData.varisNoktasi;
-        document.getElementById('seferTarihi').textContent = formData.seferTarihi;
+        document.getElementById('otobusPlaka').textContent = formData2.otobusPlaka;
+        document.getElementById('seferTarihi').textContent = formData2.seferTarih;
         
         // Eğer koltuklar null ise, boş bir array olarak ayarla
         const seats = selectedSeats || [];
@@ -58,7 +62,7 @@
         document.getElementById('satınAlınanKoltuklar').textContent = seats.join(', ');
         
         // Fiyatı hesapla ve yazdır
-        const fiyat = seats.length * 300;
+        const fiyat = seats.length * formData2.seferFiyat;
         document.getElementById('fiyat').textContent = fiyat + ' TL';
     </script>
     
