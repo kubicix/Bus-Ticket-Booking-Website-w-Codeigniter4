@@ -67,7 +67,7 @@
             margin: 0;
         }
 
-        .row {}
+
 
         .seats {
             display: flex;

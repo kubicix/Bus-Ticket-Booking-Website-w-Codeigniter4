@@ -49,16 +49,16 @@
         </div>
         <div class="row align-items-center" style="background-color: cadetblue; height: 75px;  border:2px solid black; text-align: center;">
             <div class="col" style="border-right: 2px solid black;">
-                <a href="">Hesabım</a>
+                <a href="user.php">Hesabım</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="">Üye Bilgilerim</a>
+                <a href="userInf.php">Üye Bilgilerim</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="">Bilet Satın Al</a>
+                <a href="obilet.php">Bilet Satın Al</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="">Umtur Puanlarım</a>
+                <a href="points.php">Umtur Puanlarım</a>
             </div>
             <div class="col">
                 <a href="logout.php">Oturumu Kapat</a>
