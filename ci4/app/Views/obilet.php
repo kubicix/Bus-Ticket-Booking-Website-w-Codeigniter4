@@ -158,7 +158,13 @@
             }
         }
 
+        .bought-label {
+            background: red !important; // 'bought-label' sınıfı için kırmızı arkaplan
+        }
 
+        .available-label {
+            background: blue !important; // 'available-label' sınıfı için mavi arkaplan
+        }
 
         @-webkit-keyframes rubberBand {
             0% {
@@ -259,40 +265,55 @@
             <div class="col-md-6">
                 <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
                 <form id="myForm" method="post">
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
-            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi" aria-label="Kalkış Noktası">
-                <option value="istanbul" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'istanbul') echo 'selected'; ?>>İstanbul</option>
-                <option value="izmir" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'izmir') echo 'selected'; ?>>İzmir</option>
-                <option value="ankara" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'ankara') echo 'selected'; ?>>Ankara</option>
-                <option value="antalya" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'antalya') echo 'selected'; ?>>Antalya</option>
-                <option value="kocaeli" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'kocaeli') echo 'selected'; ?>>Kocaeli</option>
-                <option value="edirne" <?php if(isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'edirne') echo 'selected'; ?>>Edirne</option>
-            </select>
-        </div>
-        <div class="col-md-6">
-            <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
-            <select class="form-select" name="varisNoktasi" id="varisNoktasi" aria-label="Varış Noktası">
-                <option value="istanbul" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'istanbul') echo 'selected'; ?>>İstanbul</option>
-                <option value="izmir" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'izmir') echo 'selected'; ?>>İzmir</option>
-                <option value="ankara" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'ankara') echo 'selected'; ?>>Ankara</option>
-                <option value="antalya" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'antalya') echo 'selected'; ?>>Antalya</option>
-                <option value="kocaeli" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'kocaeli') echo 'selected'; ?>>Kocaeli</option>
-                <option value="edirne" <?php if(isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'edirne') echo 'selected'; ?>>Edirne</option>
-            </select>
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
-            <input type="date" class="form-control" id="tarih" name="tarih" value="<?php echo isset($_POST['tarih']) ? $_POST['tarih'] : ''; ?>">
-        </div>
-        <div class="col-md-6 d-flex align-items-end">
-            <button type="submit" class="btn btn-success" name="submit">Seferleri Listele</button>
-        </div>
-    </div>
-</form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
+                            <select class="form-select" name="kalkisNoktasi" id="kalkisNoktasi"
+                                aria-label="Kalkış Noktası">
+                                <option value="istanbul" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'istanbul')
+                                    echo 'selected'; ?>>İstanbul</option>
+                                <option value="izmir" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'izmir')
+                                    echo 'selected'; ?>>İzmir</option>
+                                <option value="ankara" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'ankara')
+                                    echo 'selected'; ?>>Ankara</option>
+                                <option value="antalya" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'antalya')
+                                    echo 'selected'; ?>>Antalya</option>
+                                <option value="kocaeli" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'kocaeli')
+                                    echo 'selected'; ?>>Kocaeli</option>
+                                <option value="edirne" <?php if (isset($_POST['kalkisNoktasi']) && $_POST['kalkisNoktasi'] == 'edirne')
+                                    echo 'selected'; ?>>Edirne</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="varisNoktasi" class="form-label text-dark">Varış Noktası</label>
+                            <select class="form-select" name="varisNoktasi" id="varisNoktasi"
+                                aria-label="Varış Noktası">
+                                <option value="istanbul" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'istanbul')
+                                    echo 'selected'; ?>>İstanbul</option>
+                                <option value="izmir" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'izmir')
+                                    echo 'selected'; ?>>İzmir</option>
+                                <option value="ankara" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'ankara')
+                                    echo 'selected'; ?>>Ankara</option>
+                                <option value="antalya" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'antalya')
+                                    echo 'selected'; ?>>Antalya</option>
+                                <option value="kocaeli" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'kocaeli')
+                                    echo 'selected'; ?>>Kocaeli</option>
+                                <option value="edirne" <?php if (isset($_POST['varisNoktasi']) && $_POST['varisNoktasi'] == 'edirne')
+                                    echo 'selected'; ?>>Edirne</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="tarih" class="form-label text-dark">Tarih ve Saat</label>
+                            <input type="date" class="form-control" id="tarih" name="tarih"
+                                value="<?php echo isset($_POST['tarih']) ? $_POST['tarih'] : ''; ?>">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <button type="submit" class="btn btn-success" name="submit">Seferleri Listele</button>
+                        </div>
+                    </div>
+                </form>
 
                 <div class="col-md-6">
                     <h2 class="text-dark mb-4">Seferler</h2>
@@ -388,36 +409,36 @@
     </div>
 
     <script>
-    function getRowData(button) {
-        var row = button.closest('tr');
-        var cells = row.getElementsByTagName('td');
-        var kalkisVaris = cells[0].textContent;
-        var otobusPlaka = cells[1].textContent;
-        var seferTarih = cells[2].textContent;
-        var seferFiyat = cells[3].textContent;
+        function getRowData(button) {
+            var row = button.closest('tr');
+            var cells = row.getElementsByTagName('td');
+            var kalkisVaris = cells[0].textContent;
+            var otobusPlaka = cells[1].textContent;
+            var seferTarih = cells[2].textContent;
+            var seferFiyat = cells[3].textContent;
 
-        // Form verilerini JSON formatına dönüştürme
-        const formData = {
-            kalkisVaris: kalkisVaris,
-            otobusPlaka: otobusPlaka,
-            seferTarih: seferTarih,
-            seferFiyat: seferFiyat
-            // Diğer form alanları buraya eklenebilir
-        };
+            // Form verilerini JSON formatına dönüştürme
+            const formData = {
+                kalkisVaris: kalkisVaris,
+                otobusPlaka: otobusPlaka,
+                seferTarih: seferTarih,
+                seferFiyat: seferFiyat
+                // Diğer form alanları buraya eklenebilir
+            };
 
-        // JSON verisini localStorage'a kaydetme
-        localStorage.setItem('rowData', JSON.stringify(formData));
+            // JSON verisini localStorage'a kaydetme
+            localStorage.setItem('rowData', JSON.stringify(formData));
 
-        // Bilgileri ekrana yazdırma
-        console.log("Kalkış-Varış: " + kalkisVaris);
-        console.log("Otobüs Plaka: " + otobusPlaka);
-        console.log("Sefer Tarihi: " + seferTarih);
-        console.log("Sefer Fiyatı: " + seferFiyat);
-    }
-</script>
+            // Bilgileri ekrana yazdırma
+            console.log("Kalkış-Varış: " + kalkisVaris);
+            console.log("Otobüs Plaka: " + otobusPlaka);
+            console.log("Sefer Tarihi: " + seferTarih);
+            console.log("Sefer Fiyatı: " + seferFiyat);
+        }
+    </script>
 
 
-    
+
 
     <!-- koltukları diğer sayfaya gönderim için js kodu -->
     <script>
@@ -439,7 +460,7 @@
         });
     </script>
 
-    
+
 
     <!-- form bilgilerini diğer sayfaya gönderim için js kodu -->
     <script>
@@ -500,24 +521,40 @@
             // Koltuk listesini işleme
             koltukListesi.forEach(function (koltuk) {
                 var koltukElement = document.getElementById(koltuk.koltuk_no);
-                if (koltuk.is_bought == 1) {
-                    // Koltuk satın alınmışsa kırmızıya boyayıp devre dışı bırak
-                    koltukElement.disabled = true;
-                    koltukElement.style.backgroundColor = "red";
-                    koltukElement.style.setProperty("background", "red", "important");
-                    
-                } else {
-                    // Koltuk satın alınmamışsa maviye boyayıp devre dışı bırakma
-                    koltukElement.disabled = true;
-                    koltukElement.style.backgroundColor = "blue";
-                    koltukElement.style.setProperty("background", "blue", "important");
-                }
+                var labelElement = koltukElement.nextElementSibling; // 'input' elemanının yanındaki 'label' elemanını alır.
 
+                if (koltuk.is_bought == 1) {
+                    // Koltuk satın alınmışsa ve 'label' elemanı varsa
+                    koltukElement.disabled = true; // input elemanını disable yap
+                    if (labelElement) {
+                        labelElement.classList.add('bought-label'); // 'label' elemanına 'bought-label' sınıfını ekle
+                        // Koltuk cinsiyetine göre içeriği ayarla
+                        if (koltuk.cinsiyet === 'E') {
+                            labelElement.style.content = 'url(img/man.png)';
+                        } else {
+                            labelElement.style.content = 'url(img/woman.png)';
+                        }
+                    }
+                } else {
+                    // Koltuk satın alınmamışsa ve 'label' elemanı varsa
+                    koltukElement.disabled = true; // input elemanını disable yapma
+                    if (labelElement) {
+                        labelElement.classList.add('available-label'); // 'label' elemanına 'available-label' sınıfını ekle
+
+                        // Koltuk cinsiyetine göre içeriği ayarla
+                        if (koltuk.cinsiyet === 'E') {
+                            labelElement.style.content = 'url(img/man.png)';
+                        } else {
+                            labelElement.style.content = 'url(img/woman.png)';
+                        }
+                    }
+                }
             });
         }
+
     </script>
 
-    
+
 
     <!-- Koltuk oluşturma -->
     <script>
