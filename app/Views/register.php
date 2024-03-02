@@ -44,8 +44,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Profile</title>
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -54,7 +54,10 @@
 
 </head>
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">
+    <?php include(APPPATH . 'Views/navbar.php'); ?>
+        
+    </nav>
 
     <section class="py-3 mt-3" >
         <div class="container">
@@ -155,8 +158,11 @@
         </div>
     </section>
 
-    <div id="footerContainer"></div>
-    <script>
+    <div id="footerContainer">
+    <?php include(APPPATH . 'Views/footer.php'); ?>
+
+    </div>
+    <!-- <script>
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -169,7 +175,7 @@
                 document.getElementById('footerContainer').innerHTML = data;
             })
             .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    </script> -->
 
     <script src="js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
