@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'scss/_variables.scss';
+@import 'path/to/bootstrap/scss/bootstrap';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.pt-30{
+    padding-top: 30px;
+}
+.pb-80{
+    padding-bottom: 80px;
+}
+.nopadding{
+    padding: 0;
+}
+.text-20{
+    font-size:20px;
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 50px;
+}
+
+nav h2{
+    color: #ffb742;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover a {
+    color: grey ;
+}
+
+nav ul .submenu {
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 999;
+    transition: all ease 0.5s;
+    display: none; /* Add this line */
+}
+
+nav ul li:hover .submenu {
+    opacity: 1;
+    display: block; /* Add this line */
+}
+
+nav ul .submenu li {
+    margin: 0;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+nav ul .submenu li a {
+    color: black;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Önceki ve Sonraki Oklarının Arkasını Yuvarlak Siyah Yapma */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: white;
+
+}
+
+/* Ok İkonlarının Rengini Ayarlama */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 200px;
+    width: 200px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: black;
+    filter: invert(1); /* Ok rengini ters çevirme */
+}
