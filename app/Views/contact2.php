@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +34,10 @@
     </style>
 </head>
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">
+    <?php include(APPPATH . 'Views/navbar.php'); ?>
+
+    </nav>
     
     <div class="container mt-5">
         <div class="row">
@@ -81,8 +83,11 @@
       </script>
 
     
-    <div id="footerContainer"></div>
-    <script>
+    <div id="footerContainer">
+    <?php include(APPPATH . 'Views/footer.php'); ?>
+
+    </div>
+    <!-- <script>
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -106,7 +111,7 @@
                 document.getElementById('navbarContainer').innerHTML = data;
             })
             .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    </script> -->
 
 </body>
 </html>

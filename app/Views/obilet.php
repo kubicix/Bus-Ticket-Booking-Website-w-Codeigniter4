@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Profile</title>
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -258,13 +258,16 @@
 </head>
 
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">
+        <?php include(APPPATH . 'Views/navbar.php'); ?>
+
+    </nav>
 
     <div class="container bg-light p-4 rounderd my-4">
         <div class="row">
             <div class="col-md-6">
                 <h2 class="text-dark mb-4">Bilet İşlemleri</h2>
-                <form id="myForm" method="post">
+                <form id="myForm" method="post" action="<?= base_url('obilet') ?>">
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="kalkisNoktasi" class="form-label text-dark">Kalkış Noktası</label>
@@ -326,67 +329,34 @@
                                 <th>Fiyat</th>
                                 <th>Firma</th>
                                 <th>Koltuk Listesi</th>
-
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            if (isset($_POST['submit'])) {
-                                // Formdan gelen verileri alma
-                                $kalkisNoktasi = $_POST['kalkisNoktasi'];
-                                $varisNoktasi = $_POST['varisNoktasi'];
-                                $tarih = $_POST['tarih'];
-
-                                // Formdan gelen verileri kontrol etmek için
-                                // echo "Kalkış Noktası: " . $kalkisNoktasi . "<br>";
-                                // echo "Varış Noktası: " . $varisNoktasi . "<br>";
-                                // echo "Tarih: " . $tarih . "<br>";
-                            
-                                // Veritabanı bağlantısı için gerekli bilgiler
-                                $servername = "localhost";
-                                $username = "root"; // Veritabanı kullanıcı adı
-                                $password = ""; // Veritabanı şifresi
-                                $dbname = "bus"; // Kullanılan veritabanı adı
-                            
-                                // Veritabanı bağlantısını oluşturma
-                                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                                // Bağlantıyı kontrol etme
-                                if ($conn->connect_error) {
-                                    die("Veritabanına bağlanılamadı: " . $conn->connect_error);
-                                }
-
-                                // SQL sorgusunu oluşturma
-                                $sql = "SELECT * FROM seferler WHERE kalkis_yeri = '$kalkisNoktasi' AND varis_yeri = '$varisNoktasi'";
-
-
-                                // SQL sorgusunu çalıştırma ve sonuçları alma
-                                $result = $conn->query($sql);
-
-                                // Sonuçları işleme ve ekrana yazdırma
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        echo "<tr>";
-                                        echo "<td>" . $row["kalkis_yeri"] . " / " . $row["varis_yeri"] . "</td>";
-                                        echo "<td>" . $row["otobus_plaka"] . "</td>";
-                                        echo "<td>" . $row["sefer_tarih"] . "</td>";
-                                        echo "<td>" . $row["sefer_fiyat"] . "</td>";
-                                        echo "<td>" . '<img src="img/logo-seffaf.png" style="height: 100px;" alt="">' . "</td>";
-                                        echo '<td><button type="button" class="btn btn-success" onclick="getKoltukListesi(\'' . $row["otobus_plaka"] . '\', \'' . $row["sefer_tarih"] . '\'); getRowData(this)">Koltuk Listesi Getir</button></td>';
-                                        echo "</tr>";
-                                    }
-                                } else {
-                                    echo '<tr><td colspan="4">Sefer bulunamadı.</td></tr>';
-                                }
-
-                                // Veritabanı bağlantısını kapatma
-                                $conn->close();
-                            }
-                            ?>
-
+                            <?php foreach ($seferler as $sefer): ?>
+                                <tr>
+                                    <td>
+                                        <?= $sefer['kalkis_yeri'] ?> /
+                                        <?= $sefer['varis_yeri'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $sefer['otobus_plaka'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $sefer['sefer_tarih'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $sefer['sefer_fiyat'] ?>
+                                    </td>
+                                    <td><img src="<?= IMG ?>logo-seffaf.png" alt="umuttepe turizm logo" style="height: 100px;"></td>
+                                    <td><button type="button" class="btn btn-success"
+                                            onclick="getKoltukListesi('<?= $sefer['otobus_plaka'] ?>', '<?= $sefer['sefer_tarih'] ?>'); getRowData(this)">Koltuk
+                                            Listesi Getir</button></td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
+
             </div>
 
 
@@ -479,7 +449,7 @@
             localStorage.setItem('formData', jsonString);
 
             // Diğer sayfaya yönlendirme
-            window.location.href = 'obilet2.html';
+            window.location.href = 'obilet2';
         });
 
         // Tarih formatını ayarlayan fonksiyon
@@ -530,9 +500,9 @@
                         labelElement.classList.add('bought-label'); // 'label' elemanına 'bought-label' sınıfını ekle
                         // Koltuk cinsiyetine göre içeriği ayarla
                         if (koltuk.cinsiyet === 'E') {
-                            labelElement.style.content = 'url(img/man.png)';
+                            labelElement.style.content = 'url(<?= IMG ?>man.png)';
                         } else {
-                            labelElement.style.content = 'url(img/woman.png)';
+                            labelElement.style.content = 'url(<?= IMG ?>woman.png)';
                         }
                     }
                 } else {
@@ -543,9 +513,9 @@
 
                         // Koltuk cinsiyetine göre içeriği ayarla
                         if (koltuk.cinsiyet === 'E') {
-                            labelElement.style.content = 'url(img/man.png)';
+                            labelElement.style.content = 'url(<?= IMG ?>man.png)';
                         } else {
-                            labelElement.style.content = 'url(img/woman.png)';
+                            labelElement.style.content = 'url(<?= IMG ?>woman.png)';
                         }
                     }
                 }
@@ -601,7 +571,9 @@
         });
     </script>
 
-    <div id="footerContainer"></div>
+    <?php include(APPPATH . 'Views/footer.php'); ?>
+
+    <!-- <div id="footerContainer"></div>
     <script>
         fetch('navbar.html')
             .then(response => response.text())
@@ -628,7 +600,7 @@
                 document.getElementById('navbarContainer').innerHTML = data;
             })
             .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    </script> -->
 
 </body>
 
