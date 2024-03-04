@@ -35,7 +35,6 @@
     
 <nav id="navbarContainer">
       <?php include(APPPATH . 'Views/navbar.php'); ?>
-      
 </nav>
 
 
@@ -151,9 +150,10 @@
     </section>
     
     <div id="footerContainer">
-    <?= view('footer') ?>
-
+      <?= view('footer') ?>
     </div>
+
+
   <script>
       function initMap() {
         var directionsService = new google.maps.DirectionsService;

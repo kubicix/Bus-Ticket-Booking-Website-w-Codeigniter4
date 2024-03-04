@@ -22,10 +22,10 @@
 
             unset($_SESSION['message']);
 
-            header('Location: user.php');
+            header('Location: user');
         }else
         {
-            header('Location: account.php');
+            header('Location: account');
             $_SESSION['message']= 'Cep telefon numarası veya şifre yanlış.';
 
         }

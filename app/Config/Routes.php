@@ -13,6 +13,15 @@ $routes->get('/contact1', 'Contact1::index');
 $routes->get('/contact2', 'Contact2::index');
 
 $routes->get('/register', 'Register::index');
+$routes->get('/account', 'Account::index');
+$routes->get('/resetPassword', 'ResetPassword::index');
+$routes->get('/authcode', 'Authcode::index');
+$routes->get('/about', 'About::index');
+$routes->get('/IK', 'İK::index');
+$routes->get('/KVKK', 'KVKKController::index');
+$routes->get('/ticketInquiry', 'TicketInquiry::index');
+$routes->get('/travelGuide', 'TravelGuide::index');
+$routes->get('/services', 'Services::index');
 
 $routes->get('obilet', 'Bilet::index');
 $routes->post('obilet', 'Bilet::seferleriListele');

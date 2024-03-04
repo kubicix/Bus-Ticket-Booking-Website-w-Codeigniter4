@@ -159,11 +159,11 @@
         }
 
         .bought-label {
-            background: red !important; // 'bought-label' sınıfı için kırmızı arkaplan
+            background: red !important; 
         }
 
         .available-label {
-            background: blue !important; // 'available-label' sınıfı için mavi arkaplan
+            background: blue !important; 
         }
 
         @-webkit-keyframes rubberBand {

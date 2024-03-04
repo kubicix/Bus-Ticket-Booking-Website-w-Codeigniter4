@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 
 
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">       <?php include(APPPATH . 'Views/navbar.php'); ?></nav>
 
     <div class="container">
         <div class="row " style="background-color: darkgreen; margin-top: 25px; height: 25px; border:2px solid black; padding-bottom: 30px; padding-top: 5px;" >
@@ -125,21 +125,7 @@
         </div>
     </div>
 
-    <div id="footerContainer"></div>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    <div id="footerContainer">    <?= view('footer') ?> </div>
 
     <script src="js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>

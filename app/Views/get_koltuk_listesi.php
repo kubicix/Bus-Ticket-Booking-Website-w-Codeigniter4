@@ -2,7 +2,7 @@
 // Veritabanı bağlantısı için gerekli bilgiler
 $servername = "localhost";
 $username = "root"; // Veritabanı kullanıcı adı
-$password = ""; // Veritabanı şifresi
+$password = "qwertyu10"; // Veritabanı şifresi
 $dbname = "bus"; // Kullanılan veritabanı adı
 
 // POST isteği ile gelen parametreleri al

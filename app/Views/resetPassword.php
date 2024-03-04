@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">      <?php include(APPPATH . 'Views/navbar.php'); ?></nav>
 
     <section class="py-3 mt-3">
         <div class="container">
@@ -56,21 +56,8 @@
     </section>
 
 
-    <div id="footerContainer"></div>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    <div id="footerContainer">    <?= view('footer') ?></div>
+
 
     <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEYI_BURAYA_GIR&callback=initMap"></script>

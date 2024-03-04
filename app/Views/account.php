@@ -1,5 +1,5 @@
 <?php
-    session_start();
+
     include("config.php");
     
     // Eğer bir giriş denemesi yapılmışsa ve hata mesajı varsa, bu mesajı al ve temizle
@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
 
 </head>
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">      <?php include(APPPATH . 'Views/navbar.php'); ?></nav>
 
     <section class="py-3 mt-3" >
         <div class="container">
@@ -43,7 +43,7 @@
     <section class="pt-30 pb-80 bg-border">
         <div class="container">
             <div id="hesabim" class="row">
-                <form method="POST" action="authcode.php">
+                <form method="POST" action="authcode">
                     <div class="col-xs-4 uo">
                         <h5>ÜYELİK OTURUMU</h5><br>
                         <div class="col-md-10">
@@ -55,10 +55,10 @@
                             <input type="password" class="form-control" id="Sifre" name="Sifre" placeholder="Üye Şifre" autocomplete="off">
                         </div><br>
                         <div class="col-md-12">
-                            <p style="text-align: left;"><a href="resetPassword.html">Şifremi Unuttum</a></p>
+                            <p style="text-align: left;"><a href="resetPassword">Şifremi Unuttum</a></p>
                         </div>
                         <div class="col-md-12">
-                            <a href="register.html" class="btn btn-default pull-left" style="background-color: rgb(206, 204, 204);">Üye Ol</a>
+                            <a href="register" class="btn btn-default pull-left" style="background-color: rgb(206, 204, 204);">Üye Ol</a>
                             <button type="submit" id="login_btn" name="login_btn" class="btn btn-primary pull-right">Oturum Aç</button>
                         </div>
                     </div>
@@ -67,21 +67,10 @@
         </div>
     </section>
 
-    <div id="footerContainer"></div>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    <div id="footerContainer">
+        <?= view('footer') ?>
+    </div>
+
 
     <script src="js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>

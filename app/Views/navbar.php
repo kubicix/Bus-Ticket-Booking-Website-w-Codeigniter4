@@ -6,25 +6,24 @@
     <li><a href="anasayfa">ANASAYFA</a></li>
     <li><a href="#">KURUMSAL</a>
         <ul class="submenu dropdown-menu">
-            <li><a class="dropdown-item" href="about.php">Hakkımızda</a></li>
-            <li><a class="dropdown-item" href="IK.php">İnsan Kaynakları</a></li>
-            <li><a class="dropdown-item" href="KVKK.php">Kişisel Verilerin Korunması</a></li>
+            <li><a class="dropdown-item" href="about">Hakkımızda</a></li>
+            <li><a class="dropdown-item" href="IK">İnsan Kaynakları</a></li>
+            <li><a class="dropdown-item" href="KVKK">Kişisel Verilerin Korunması</a></li>
         </ul>
     </li>
     <li><a href="#">ONLİNE İŞLEMLER</a>
         <ul class="submenu dropdown-menu">
             <li><a class="dropdown-item" href="obilet">Online Bilet</a></li>
-
-            <li><a class="dropdown-item" href="register">Yeni Üye</a></li>
-            <li><a class="dropdown-item" href="resetPassword.php">Şifremi Unuttum</a></li>
-            <li><a class="dropdown-item" href="ticketInquiry.php">E-Bilet Sorgula</a></li>
+            <li><a class="dropdown-item" href="account">Giriş Yap</a></li>
+            <li><a class="dropdown-item" href="resetPassword">Şifremi Unuttum</a></li>
+            <li><a class="dropdown-item" href="ticketInquiry">E-Bilet Sorgula</a></li>
         </ul>
     </li>
     <li><a href="#">HİZMETLERİMİZ</a>
         <ul class="submenu dropdown-menu">
             <li><a class="dropdown-item" href="">Seferlerimiz</a></li>
-            <li><a class="dropdown-item" href="travelGuide.php">Seyahat Rehberi</a></li>
-            <li><a class="dropdown-item" href="services.php">Şehir İçi Servislerimiz</a></li>
+            <li><a class="dropdown-item" href="travelGuide">Seyahat Rehberi</a></li>
+            <li><a class="dropdown-item" href="services">Şehir İçi Servislerimiz</a></li>
         </ul>
     </li>
     <li><a href="#">İLETİŞİM</a>

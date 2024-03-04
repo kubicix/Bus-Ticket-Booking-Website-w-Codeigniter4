@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">
+        <?php include(APPPATH . 'Views/navbar.php'); ?>
+    </nav>
     
     <div class="mx-5 pt-5">
         <h1>Kişisel Verilerin Korunması</h1>
         <div class="mx-5 pt-5">
-            <img class="img-fluid" src="images/kvkk.jpeg" alt="">
+            <img class="img-fluid" src="<?= base_url('public/images/kvkk.jpeg') ?>" alt="">
             <br><br><br>
             <h4>Veri Sorumlusu ve İletişim Bilgileri</h4>
             <p>Bu gizlilik politikası, Umuttepe Turizm Adı tarafından işletilen otobüs yolcu taşımacılığı hizmetleri sırasında kişisel verilerin toplanması, kullanılması ve korunması hakkında bilgi sağlamaktadır. Şirketimiz, Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu olarak kabul edilmektedir. İlgili konularla ilgili herhangi bir soru veya endişeniz varsa, lütfen aşağıdaki iletişim bilgilerini kullanarak bize ulaşın:
@@ -60,21 +62,9 @@
         </div>
     </div>
 
-    <div id="footerContainer"></div>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    <div id="footerContainer">
+        <?= view('footer') ?>
+    </div>
 
     <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEYI_BURAYA_GIR&callback=initMap"></script>

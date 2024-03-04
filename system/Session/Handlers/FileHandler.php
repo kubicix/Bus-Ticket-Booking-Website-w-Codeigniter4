@@ -187,6 +187,8 @@ class FileHandler extends BaseHandler
             return false;
         }
 
+        
+
         if ($this->fingerprint === md5($data)) {
             return ($this->fileNew) ? true : touch($this->filePath . $id);
         }
