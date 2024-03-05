@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import 'scss/_variables.scss';
-@import 'path/to/bootstrap/scss/bootstrap';
+/*@import 'scss/_variables.scss';
+@import 'path/to/bootstrap/scss/bootstrap';*/
 
 *{
     margin: 0;
@@ -111,3 +111,29 @@ nav ul .submenu li a {
     background-color: black;
     filter: invert(1); /* Ok rengini ters çevirme */
 }
+
+
+
+.StripeElement {
+    background-color: white;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+background-color: #fefde5 !important;
+}
+  
