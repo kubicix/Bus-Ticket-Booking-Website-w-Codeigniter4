@@ -1,3 +1,8 @@
+<?php
+    $session = session();
+    $isLoggedIn = $session->get('isLoggedIn');
+?>
+
 <h2 class="mt-4 mb-3">
     <a href="anasayfa"><img src="<?= IMG ?>logo-seffaf.png" alt="umuttepe turizm logo" style="width: 200px; height: 150px;">
 </a>
@@ -14,7 +19,11 @@
     <li><a href="#">ONLİNE İŞLEMLER</a>
         <ul class="submenu dropdown-menu">
             <li><a class="dropdown-item" href="obilet">Online Bilet</a></li>
-            <li><a class="dropdown-item" href="account">Giriş Yap</a></li>
+            <?php if ($isLoggedIn): ?>
+                <li><a class="dropdown-item" href="<?= site_url('user') ?>">Hesabım</a></li>
+            <?php else: ?>
+                <li><a class="dropdown-item" href="<?= site_url('account') ?>">Giriş Yap</a></li>
+            <?php endif; ?>
             <li><a class="dropdown-item" href="resetPassword">Şifremi Unuttum</a></li>
             <li><a class="dropdown-item" href="ticketInquiry">E-Bilet Sorgula</a></li>
         </ul>

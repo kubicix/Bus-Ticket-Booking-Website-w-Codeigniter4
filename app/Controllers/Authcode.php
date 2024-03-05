@@ -4,9 +4,11 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 
-class Auth extends Controller {
+$isLoggedIn = false;
+class Authcode extends Controller {
 
     public function login() {
+
         $request = \Config\Services::request();
         $session = session();
 
@@ -19,7 +21,7 @@ class Auth extends Controller {
                       ->first();
 
         if($user) {
-            $session->set('auth', true);
+            $session->set('isLoggedIn', true);
             $session->set('auth_user', [
                 'AdiSoyadi' => $user['AdiSoyadi'],
                 'EMail' => $user['EMail']

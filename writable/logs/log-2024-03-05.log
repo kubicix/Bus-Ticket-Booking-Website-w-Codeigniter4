@@ -1,0 +1,504 @@
+CRITICAL - 2024-03-05 11:45:19 --> mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO)
+in APPPATH\Views\config.php on line 3.
+ 1 APPPATH\Views\config.php(3): mysqli_connect('localhost', 'root', Object(SensitiveParameterValue), 'bus', 3306)
+ 2 APPPATH\Views\account.php(3): include('C:\\xampp\\htdocs\\bus\\app\\Views\\config.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus\\app\\Views\\account.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('account', [], true)
+ 6 APPPATH\Controllers\Account.php(11): view('account')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Account->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 11:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-05 11:56:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bus\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bus\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\bus\app\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#8 C:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#9 C:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bus\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bus\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\bus\app\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#7 C:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#8 C:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-03-05 11:56:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = :CepTelefon:
+AND `Sifre` = :Sifre:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 11:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-05 11:58:50 --> mysqli_sql_exception: No database selected in C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bus\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bus\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\bus\app\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#8 C:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#9 C:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-03-05 11:58:50 --> CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = :CepTelefon:
+AND `Sifre` = :Sifre:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 11:58:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `CepTelefon` = \'1148751158\'
+AND `Sifre` = \'zxcv\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `CepTelefon` = \'1148751158\'
+AND `Sifre` = \'zxcv\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = :CepTelefon:
+AND `Sifre` = :Sifre:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 11:58:50 --> [Caused by] mysqli_sql_exception: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = \'1148751158\'
+AND `Sifre` = \'zxcv\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `CepTelefon` = \'1148751158\'
+AND `Sifre` = \'zxcv\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `CepTelefon` = \'1148751158\'
+AND `Sifre` = \'zxcv\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = :CepTelefon:
+AND `Sifre` = :Sifre:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Authcode.php(19): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 11:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 12:05:08 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'C:\\xampp\\htdocs\\bus\\system\\Session\\Handlers\\FileHandler.php', 72)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\xampp\\htdocs\\bus\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1068): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 12:06:12 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'C:\\xampp\\htdocs\\bus\\system\\Session\\Handlers\\FileHandler.php', 72)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\xampp\\htdocs\\bus\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1068): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 12:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 12:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-05 13:36:04 --> mysqli_sql_exception: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist in C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\bus\system\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs...')
+#6 C:\xampp\htdocs\bus\system\Session\Session.php(919): session_start()
+#7 C:\xampp\htdocs\bus\system\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\bus\system\Config\Services.php(693): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\bus\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\bus\system\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\bus\system\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\bus\app\Controllers\Authcode.php(11): session()
+#15 C:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#16 C:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#17 C:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+CRITICAL - 2024-03-05 13:36:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 4 SYSTEMPATH\Session\Session.php(919): session_start()
+ 5 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 APPPATH\Controllers\Authcode.php(11): session()
+13 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+14 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+15 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:36:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 6 SYSTEMPATH\Session\Session.php(919): session_start()
+ 7 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 APPPATH\Controllers\Authcode.php(11): session()
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:36:04 --> [Caused by] mysqli_sql_exception: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 7 SYSTEMPATH\Session\Session.php(919): session_start()
+ 8 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 APPPATH\Controllers\Authcode.php(11): session()
+16 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+17 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 13:40:58 --> mysqli_sql_exception: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist in C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\bus\system\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs...')
+#6 C:\xampp\htdocs\bus\system\Session\Session.php(919): session_start()
+#7 C:\xampp\htdocs\bus\system\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\bus\system\Config\Services.php(693): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\bus\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\bus\system\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\bus\system\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\bus\app\Controllers\Authcode.php(11): session()
+#15 C:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#16 C:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#17 C:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#19 {main}
+CRITICAL - 2024-03-05 13:40:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 4 SYSTEMPATH\Session\Session.php(919): session_start()
+ 5 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 APPPATH\Controllers\Authcode.php(11): session()
+13 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+14 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+15 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:40:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 6 SYSTEMPATH\Session\Session.php(919): session_start()
+ 7 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 APPPATH\Controllers\Authcode.php(11): session()
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:40:58 --> [Caused by] mysqli_sql_exception: Table 'bus.c:\xampp\htdocs\bus\writable\session' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = \'ci_session:fmi1u4ollqbq7hs28805h39g3btksmo0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `C:\\xampp\\htdocs\\bus\\writable\\session`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(133): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('fmi1u4ollqbq7hs28805h39g3btksmo0')
+ 7 SYSTEMPATH\Session\Session.php(919): session_start()
+ 8 SYSTEMPATH\Session\Session.php(241): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 APPPATH\Controllers\Authcode.php(11): session()
+16 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+17 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+18 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:41:50 --> ErrorException: ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'C:\\xampp\\htdocs\\bus\\system\\Session\\Handlers\\FileHandler.php', 72)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'C:\\xampp\\htdocs\\bus\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(686): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\Session), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(1068): session()
+10 SYSTEMPATH\CodeIgniter.php(549): CodeIgniter\CodeIgniter->storePreviousURL(Object(CodeIgniter\HTTP\SiteURI))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 13:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 13:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 13:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-05 14:00:00 --> ErrorException: Undefined variable $isLoggedIn
+in APPPATH\Views\navbar.php on line 17.
+ 1 APPPATH\Views\navbar.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isLoggedIn', 'C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php', 17)
+ 2 APPPATH\Views\index.php(37): include('C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('index')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:02:13 --> ErrorException: Undefined variable $isLoggedIn
+in APPPATH\Views\navbar.php on line 17.
+ 1 APPPATH\Views\navbar.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isLoggedIn', 'C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php', 17)
+ 2 APPPATH\Views\index.php(37): include('C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('index')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:02:16 --> ErrorException: Undefined variable $isLoggedIn
+in APPPATH\Views\navbar.php on line 17.
+ 1 APPPATH\Views\navbar.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isLoggedIn', 'C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php', 17)
+ 2 APPPATH\Views\index.php(37): include('C:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('index')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-05 14:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-05 14:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

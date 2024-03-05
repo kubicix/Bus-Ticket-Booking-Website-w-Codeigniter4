@@ -5,7 +5,7 @@ namespace Config;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Session\Handlers\BaseHandler;
 use CodeIgniter\Session\Handlers\FileHandler;
-
+use CodeIgniter\Session\Handlers\DatabaseHandler;
 class Session extends BaseConfig
 {
     /**
@@ -21,7 +21,10 @@ class Session extends BaseConfig
      *
      * @var class-string<BaseHandler>
      */
+    // public string $driver = DatabaseHandler::class;
+
     public string $driver = FileHandler::class;
+
 
     /**
      * --------------------------------------------------------------------------
@@ -40,7 +43,7 @@ class Session extends BaseConfig
      * The number of SECONDS you want the session to last.
      * Setting to 0 (zero) means expire when the browser is closed.
      */
-    public int $expiration = 7200;
+    public int $expiration = 0;
 
     /**
      * --------------------------------------------------------------------------
@@ -89,7 +92,7 @@ class Session extends BaseConfig
      * when auto-regenerating the session ID. When set to FALSE, the data
      * will be later deleted by the garbage collector.
      */
-    public bool $regenerateDestroy = false;
+    public bool $regenerateDestroy = true;
 
     /**
      * --------------------------------------------------------------------------

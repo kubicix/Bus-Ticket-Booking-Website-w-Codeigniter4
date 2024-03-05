@@ -3,7 +3,7 @@
     include("config.php");
     
     // Eğer bir giriş denemesi yapılmışsa ve hata mesajı varsa, bu mesajı al ve temizle
-    $errorMessage = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+    // $errorMessage = isset($_SESSION['message']) ? $_SESSION['message'] : '';
 
 ?>
 
@@ -33,17 +33,17 @@
         </div>
     </section>
     <?php
-            if(!$errorMessage == ''){
-                echo "<div class='alert alert-danger'>".$errorMessage."</div>";
-                unset($_SESSION["message"]);
-            } elseif(isset($_SESSION['message'])){
-                echo "<div class='alert alert-danger'>".$errorMessage."</div>";
-            }
+            // if(!$errorMessage == ''){
+            //     echo "<div class='alert alert-danger'>".$errorMessage."</div>";
+            //     unset($_SESSION["message"]);
+            // } elseif(isset($_SESSION['message'])){
+            //     echo "<div class='alert alert-danger'>".$errorMessage."</div>";
+            // }
     ?>
     <section class="pt-30 pb-80 bg-border">
         <div class="container">
             <div id="hesabim" class="row">
-                <form method="POST" action="authcode">
+                <form method="POST" action="<?= site_url('authcode/login') ?>">
                     <div class="col-xs-4 uo">
                         <h5>ÜYELİK OTURUMU</h5><br>
                         <div class="col-md-10">

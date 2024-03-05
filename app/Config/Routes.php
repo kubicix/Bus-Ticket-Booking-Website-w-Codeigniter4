@@ -22,9 +22,14 @@ $routes->get('/KVKK', 'KVKKController::index');
 $routes->get('/ticketInquiry', 'TicketInquiry::index');
 $routes->get('/travelGuide', 'TravelGuide::index');
 $routes->get('/services', 'Services::index');
+$routes->get('/user', 'User::index');
+$routes->get('/logout', 'Logout::index');
 
 $routes->get('obilet', 'Bilet::index');
 $routes->post('obilet', 'Bilet::seferleriListele');
+
+$routes->post('authcode/login', 'Authcode::login');
+
 
 $routes->get('obilet2', 'Bilet2::index');
 

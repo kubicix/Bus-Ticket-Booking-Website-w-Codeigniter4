@@ -61,7 +61,7 @@
                 <a href="points.php">Umtur Puanlarım</a>
             </div>
             <div class="col">
-                <a href="logout.php">Oturumu Kapat</a>
+                <a href="logout">Oturumu Kapat</a>
             </div>
         </div>
         <div class="row" style="margin-bottom: 100px; padding-top: 25px;">
