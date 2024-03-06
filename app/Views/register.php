@@ -56,7 +56,6 @@
 <body>
     <nav id="navbarContainer">
     <?php include(APPPATH . 'Views/navbar.php'); ?>
-        
     </nav>
 
     <section class="py-3 mt-3" >
@@ -159,23 +158,9 @@
     </section>
 
     <div id="footerContainer">
-    <?php include(APPPATH . 'Views/footer.php'); ?>
-
+        <?php include(APPPATH . 'Views/footer.php'); ?>
     </div>
-    <!-- <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script> -->
+
 
     <script src="js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>

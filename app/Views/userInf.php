@@ -13,7 +13,7 @@ include 'config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="scss/_variables.scss" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
@@ -51,7 +51,9 @@ include 'config.php';
 
 
 <body>
-    <nav id="navbarContainer"></nav>
+    <nav id="navbarContainer">
+        <?php include(APPPATH . 'Views/navbar.php'); ?>
+    </nav>
 
     <div class="container">
         <div class="row " style="background-color: darkgreen; margin-top: 25px; height: 25px; border:2px solid black; padding-bottom: 30px; padding-top: 5px;">
@@ -61,19 +63,19 @@ include 'config.php';
         </div>
         <div class="row align-items-center" style="background-color: cadetblue; height: 75px;  border:2px solid black; text-align: center;">
             <div class="col" style="border-right: 2px solid black;">
-                <a href="user.php">Hesabım</a>
+                <a href="user">Hesabım</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="userInf.php">Üye Bilgilerim</a>
+                <a href="userInf">Üye Bilgilerim</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="obilet.php">Bilet Satın Al</a>
+                <a href="obilet">Bilet Satın Al</a>
             </div>
             <div class="col" style="border-right: 2px solid black;">
-                <a href="points.php">Umtur Puanlarım</a>
+                <a href="points">Umtur Puanlarım</a>
             </div>
             <div class="col">
-                <a href="logout.php">Oturumu Kapat</a>
+                <a href="logout">Oturumu Kapat</a>
             </div>
         </div>
         <div class="row " style="text-align: center; background-color:darkslategray; margin-top: 25px; padding:5px">
@@ -378,21 +380,10 @@ include 'config.php';
 
     </div>
 
-    <div id="footerContainer"></div>
-    <script>
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbarContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footerContainer').innerHTML = data;
-            })
-            .catch(error => console.error('Navbar yüklenirken bir hata oluştu:', error));
-    </script>
+    <div id="footerContainer">
+        <?php include(APPPATH . 'Views/footer.php'); ?>
+    </div>
+
 
     <script src="js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
