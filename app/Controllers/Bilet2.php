@@ -13,7 +13,19 @@ class Bilet2 extends Controller
     }
 
     public function buyTicket()
-    {
+{
+    // Session başlatma
+    $session = session();
+
+    // Oturumda kullanıcı bilgileri var mı kontrol etme
+    if ($session->has('auth_user')) {
+        // Oturumdan kullanıcı bilgilerini alma
+        $auth_user = $session->get('auth_user');
+
+        // Kullanıcı bilgilerini değişkenlere alma
+        $tcno = $auth_user['TcKimlik'];
+        $cinsiyet = $auth_user['Cinsiyeti'];
+
         // TicketModel'i kullanarak yeni bir bilet oluştur
         $model = new TicketModel();
 
@@ -43,16 +55,12 @@ class Bilet2 extends Controller
         echo "Kalkış Tarihi: " . $kalkisTarihi . "<br>";
         echo "Otobüs Plakası:-" . $otobusPlakasi . "-<br>";
         echo "Koltuk Numarası: " . $koltukNo . "<br>";
-
+        echo "Tc Kimlik: " . $tcno . "<br>";
+        echo "Cinsiyet: " . $cinsiyet . "<br>";
 
         //hazırlar
-
-        $tcno = 'eklenecek'; // Kullanıcıdan alınacak
-        $cinsiyet = 'eklenecek'; // Kullanıcıdan alınacak
         $is_bought = 1;
         $ticket_date = date('Y-m-d H:i:s');
-
-
 
         // Yeni bir bilet oluşturmak için SQL sorgusunu hazırlama
         $sql = "INSERT INTO tickets (kalkis_tarih, tcno, cinsiyet, otobus_plaka, koltuk_no, is_bought, ticket_date) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -63,10 +71,7 @@ class Bilet2 extends Controller
             die("Sorgu hatası: " . $conn->error);
         }
 
-
         // Parametreleri sorguya bağlama
-
-
         $stmt->bind_param("sssssis", $kalkisTarihi, $tcno, $cinsiyet, $otobusPlakasi, $koltukNo, $is_bought, $ticket_date);
 
         // Insert işlemi sonrası bilgi yazdırma
@@ -82,7 +87,14 @@ class Bilet2 extends Controller
 
         // Yönlendirme yerine alert kullanarak mesaj göster
         echo "<script>alert('Bilet başarıyla satın alındı!');</script>";
+    } else {
+        // Oturumda kullanıcı bilgisi yoksa, uygun bir hata mesajı gösterme veya yönlendirme yapma...
+        echo "Kullanıcı oturumu bulunamadı.";
+        // Veya uygun bir yönlendirme yapabilirsiniz:
+        // return redirect()->to('login');
     }
+}
+
 
 
 

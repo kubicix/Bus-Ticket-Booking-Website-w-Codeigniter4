@@ -5,9 +5,11 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 
 $isLoggedIn = false;
-class Authcode extends Controller {
+class Authcode extends Controller
+{
 
-    public function login() {
+    public function login()
+    {
 
         $request = \Config\Services::request();
         $session = session();
@@ -17,14 +19,16 @@ class Authcode extends Controller {
 
         $model = new \App\Models\AuthModel();
         $user = $model->where('CepTelefon', $CepTelefon)
-                      ->where('Sifre', $Sifre)
-                      ->first();
+            ->where('Sifre', $Sifre)
+            ->first();
 
-        if($user) {
+        if ($user) {
             $session->set('isLoggedIn', true);
             $session->set('auth_user', [
                 'AdiSoyadi' => $user['AdiSoyadi'],
-                'EMail' => $user['EMail']
+                'EMail' => $user['EMail'],
+                'TcKimlik' => $user['TcKimlik'],
+                'Cinsiyeti' => $user['Cinsiyeti']
             ]);
 
             return redirect()->to('user');
