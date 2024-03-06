@@ -77,6 +77,8 @@ class Bilet2 extends Controller
         // Insert işlemi sonrası bilgi yazdırma
         if ($stmt->execute()) {
             echo "Bilet başarıyla veritabanına eklendi.\n";
+            $last_id = $conn->insert_id;
+            return redirect()->to(site_url('payment?pid='.$last_id));
         } else {
             echo "Bilet eklenirken bir hata oluştu: " . $stmt->error . "\n" . $kalkisTarihi, $tcno, $cinsiyet, $otobusPlakasi, $koltukNo, $is_bought, $ticket_date;
         }
@@ -86,7 +88,8 @@ class Bilet2 extends Controller
         $conn->close();
 
         // Yönlendirme yerine alert kullanarak mesaj göster
-        echo "<script>alert('Bilet başarıyla satın alındı!');</script>";
+        // echo "<script>alert('Bilet başarıyla satın alındı!');</script>";
+        // return redirect()->to(site_url('payment?tid='.$last_id));
     } else {
         // Oturumda kullanıcı bilgisi yoksa, uygun bir hata mesajı gösterme veya yönlendirme yapma...
         echo "Kullanıcı oturumu bulunamadı.";
@@ -94,8 +97,4 @@ class Bilet2 extends Controller
         // return redirect()->to('login');
     }
 }
-
-
-
-
 }

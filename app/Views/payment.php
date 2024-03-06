@@ -15,8 +15,8 @@
     </nav>
         <div class="container">
             <h2 class="my-4 text-center">Ödeme Bilgileri</h2>
-            <!-- <form action="./charge.php" method="post" id="payment-form"> -->
             <form action="<?= base_url('payment/process_payment') ?>" method="post" id="payment-form">
+                <input type="hidden" name="pid" value="<?= $pid ?>">
                 <div class="form-row">
                 <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Kart Üzerindeki İsim">
                 <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Kart Üzerindeki Soyisim">

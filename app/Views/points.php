@@ -86,8 +86,49 @@ include 'config.php';
                 Umtur Bilgileriniz
             </div>
         </div>
+        <?php
+             $session = session();
+             if($session->has('auth_user')){
+                    $auth_user = $session->get('auth_user');
+                    $userTC = $auth_user['TcKimlik'];
+                    $conn = new \mysqli("localhost", "root", "", "bus");
+                    if ($conn->connect_error) {
+                        die("Veritabanına bağlanılamadı: " . $conn->connect_error);
+                    } else {
+                        $sql = "SELECT users.*, balances.* FROM users JOIN balances ON users.TcKimlik = balances.TcKimlik WHERE users.TcKimlik = ? GROUP BY users.TcKimlik;";
 
-        <div class="row custom-border">
+                        $stmt = $conn->prepare($sql);
+                        if ($stmt === false) {
+                            die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
+                        }
+                        $stmt->bind_param('s', $userTC);
+                        $stmt->execute(); // Sorguyu çalıştır
+                        $result = $stmt->get_result(); // Sonuçları al
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<div class='row custom-border'>";
+                            echo "<div class='col-md-9'>Gsm Numaranız:</div>";
+                            echo "<div class='col-md-3' style='text-align: right;'>".$row['CepTelefon'] ."</div>";
+                            echo "</div>";
+
+                            echo "<div class='row custom-border'>";
+                            echo "<div class='col-md-9'>Adınız Soyadınız:</div>";
+                            echo "<div class='col-md-3' style='text-align: right;'>".$row['AdiSoyadi'] ."</div>";
+                            echo "</div>";
+
+                            echo "<div class='row custom-border'>";
+                            echo "<div class='col-md-9'>Cinsiyetiniz:</div>";
+                            echo "<div class='col-md-3' style='text-align: right;'>".$row['Cinsiyeti'] ."</div>";
+                            echo "</div>";
+
+                            echo "<div class='row custom-border'>";
+                            echo "<div class='col-md-9'>Bakiyeniz:</div>";
+                            echo "<div class='col-md-3' style='text-align: right;'>".$row['TotalBalance'] ."</div>";
+                            echo "</div>";
+                        }
+                    }
+             }
+        ?>
+        <!-- <div class="row custom-border">
             <div class="col-md-9">Gsm Numaranız</div>
             <div class="col-md-3" style="text-align: right; ">.col-md-6</div>
         </div>
@@ -106,7 +147,7 @@ include 'config.php';
         <div class="row custom-border">
             <div class="col-md-9">Kullanılabilir Umtur Puanınız</div>
             <div class="col-md-3" style="text-align: right;">.col-md-6</div>
-        </div>
+        </div> -->
 
         <div class="row "
             style="background-color: darkgreen; margin-top: 25px; height: 25px; border:2px solid black; padding-bottom: 30px; padding-top: 5px;">
@@ -115,27 +156,53 @@ include 'config.php';
             </div>
         </div>
         <div class="row text-center">
-        <table class="table table-bordered" >
+        <table class="table table-bordered">
             <thead >
                 <tr >
                     <th scope="col" >İşlem Tarihi</th>
                     <th scope="col">Sefer Tarihi</th>
                     <th scope="col">İlk Durak</th>
                     <th scope="col">Son Durak</th>
-                    <th scope="col">Tür</th>
-                    <th scope="col">Umtur Puan </th>
+                    <th scope="col">Koltuk</th>
+                    <th scope="col">Bilet Tarihi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <?php
+                    $session = session();
+                    if($session->has('auth_user')){
+                        $auth_user = $session->get('auth_user');
+                        $userTC = $auth_user['TcKimlik'];
+                        $conn = new \mysqli("localhost", "root", "", "bus");
+                        if ($conn->connect_error) {
+                            die("Veritabanına bağlanılamadı: " . $conn->connect_error);
+                        } else {
+                            $sql = "SELECT tickets.*, payments.* 
+                            FROM tickets 
+                            JOIN payments ON tickets.tcno = payments.TcKimlik
+                            WHERE payments.TcKimlik = ?
+                            GROUP BY tickets.ticket_id;";
 
-                </tr>
-                <tr>
-
-                </tr>
-                <tr>
-
-                </tr>
+                            $stmt = $conn->prepare($sql);
+                            if ($stmt === false) {
+                                die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
+                            }
+                            $stmt->bind_param('s', $userTC);
+                            $stmt->execute(); // Sorguyu çalıştır
+                            $result = $stmt->get_result(); // Sonuçları al
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                    echo "<td>" . $row['created_at'] . "</td>";
+                                    echo "<td>" . $row['SeferTarihi'] . "</td>";
+                                    echo "<td>" . $row['İlkDurak'] . "</td>";
+                                    echo "<td>" . $row['SonDurak'] . "</td>";
+                                    echo "<td>" . $row['koltuk_no'] . "</td>";
+                                    echo "<td>" . $row['ticket_date'] . "</td>";
+                                echo "</tr>";
+                            }
+                        }
+                    }
+                ?>
             </tbody>
         </table>
         </div>
