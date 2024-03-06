@@ -305,7 +305,7 @@
                                     echo 'selected'; ?>>Edirne</option>
                             </select>
                         </div>
-                        <input type="text" id="cinsiyet" value="<?= isset($cinsiyet) ? $cinsiyet : ''; ?>">
+                        <input type="hidden" id="cinsiyet" value="<?= isset($cinsiyet) ? $cinsiyet : ''; ?>">
 
                     </div>
                     <div class="row mb-3">
@@ -466,6 +466,49 @@
 
     <!-- Ajax ile sefere ait koltuk listesi getir butonuyla birlikte koltukların çekilme kodu  -->
     <script>
+
+        function koltukOlustur() {
+            const cabin = document.querySelector(".cabin");
+            const seatsPerRow = 4; // Her satırda 6 koltuk
+            const totalRows = 10; // Toplam 10 satır
+
+            for (let i = 1; i <= totalRows; i++) {
+                const row = document.createElement("li");
+                row.className = `row row--${i}`;
+                const seatList = document.createElement("ol");
+                seatList.className = "seats";
+                seatList.type = "A";
+
+                for (let j = 1; j <= seatsPerRow; j++) {
+                    const seatNumber = (i - 1) * seatsPerRow + j;
+                    const seat = document.createElement("li");
+                    seat.className = "seat";
+
+                    const input = document.createElement("input");
+                    input.type = "checkbox";
+                    input.id = `${seatNumber}A`;
+                    const label = document.createElement("label");
+                    label.setAttribute("for", `${seatNumber}A`);
+                    label.textContent = seatNumber;
+
+                    seat.appendChild(input);
+                    seat.appendChild(label);
+                    seatList.appendChild(seat);
+
+                    // Boşluk oluşturma (her iki koltuk arasına)
+                    if (j == 2) {
+                        const spacer = document.createElement("li");
+                        spacer.className = "spacer";
+                        spacer.style.width = "400px"; // Boşluk genişliği
+                        seatList.appendChild(spacer);
+                    }
+                }
+
+                row.appendChild(seatList);
+                cabin.appendChild(row);
+            }
+        };
+
         function getKoltukListesi(plaka, tarih) {
             // AJAX ile koltuk listesi sorgusu yapılacak
             var xhr = new XMLHttpRequest();
@@ -491,6 +534,12 @@
         }
 
         function koltukListesiniIsle(koltukListesi) {
+            // Butona basıldığında her sefer için ayrı olarak
+            // Koltukları sıkıntısız çekebilmek için 
+            // koltuk içeriğini boşalt ve koltukları yeniden oluştur
+            var element = document.querySelector(".cabin.fuselage");
+            element.innerHTML = ""; // Elementin içeriğini boşalt
+            koltukOlustur();
             // Koltuk listesini işleme
             koltukListesi.forEach(function (koltuk) {
                 var koltukNumaralari = koltuk.koltuk_no.split(',');
@@ -546,26 +595,26 @@
         }
 
         function hesaplaYanKoltukNumarasi(koltukNumarasi, cinsiyet) {
-    var numara = parseInt(koltukNumarasi.match(/\d+/)[0], 10); // Sayısal kısmı al
-    var harf = koltukNumarasi.match(/[a-zA-Z]+/)[0]; // Harf kısmını al
-    var yanNumara;
+            var numara = parseInt(koltukNumarasi.match(/\d+/)[0], 10); // Sayısal kısmı al
+            var harf = koltukNumarasi.match(/[a-zA-Z]+/)[0]; // Harf kısmını al
+            var yanNumara;
 
-    if (cinsiyet === 'E') { // Erkek ise
-        if (numara % 2 === 0) { // Çift sayıysa bir önceki numara
-            yanNumara = (numara + 1) + harf;
-        } else { // Tek sayıysa bir sonraki numara
-            yanNumara = (numara - 1) + harf;
-        }
-    } else { // Diğer durumlarda (Bayan gibi)
-        if (numara % 2 === 0) { // Çift sayıysa bir sonraki numara
-            yanNumara = (numara - 1) + harf;
-        } else { // Tek sayıysa bir önceki numara
-            yanNumara = (numara + 1) + harf;
-        }
-    }
+            if (cinsiyet === 'E') { // Erkek ise
+                if (numara % 2 === 0) { // Çift sayıysa bir önceki numara
+                    yanNumara = (numara + 1) + harf;
+                } else { // Tek sayıysa bir sonraki numara
+                    yanNumara = (numara - 1) + harf;
+                }
+            } else { // Diğer durumlarda (Bayan gibi)
+                if (numara % 2 === 0) { // Çift sayıysa bir sonraki numara
+                    yanNumara = (numara - 1) + harf;
+                } else { // Tek sayıysa bir önceki numara
+                    yanNumara = (numara + 1) + harf;
+                }
+            }
 
-    return yanNumara;
-}
+            return yanNumara;
+        }
 
 
 

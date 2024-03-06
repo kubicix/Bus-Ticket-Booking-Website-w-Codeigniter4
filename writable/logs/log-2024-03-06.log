@@ -528,3 +528,348 @@ INFO - 2024-03-06 14:55:35 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-06 14:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-06 14:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-06 14:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 22:39:18 --> Error: Class "Locale" not found
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 SYSTEMPATH\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(null, null, null)
+ 2 SYSTEMPATH\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+ 3 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Views\navbar.php(2): session()
+10 APPPATH\Views\index.php(37): include('D:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+11 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+12 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+13 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+14 APPPATH\Controllers\Home.php(9): view('index')
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:39:18 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 D:\xampp\htdocs\bus\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\xampp\htdocs\bus\system\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+#2 D:\xampp\htdocs\bus\system\Config\Services.php(693): CodeIgniter\Session\Session->start()
+#3 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#4 D:\xampp\htdocs\bus\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 D:\xampp\htdocs\bus\system\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+#7 D:\xampp\htdocs\bus\system\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 D:\xampp\htdocs\bus\app\Views\navbar.php(2): session()
+#9 D:\xampp\htdocs\bus\app\Views\index.php(37): include('D:\\xampp\\htdocs...')
+#10 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#11 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('index', Array, true)
+#13 D:\xampp\htdocs\bus\app\Controllers\Home.php(9): view('index')
+#14 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#15 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-06 22:39:18 --> Error: Class "Locale" not found
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 SYSTEMPATH\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(null, null, null)
+ 2 SYSTEMPATH\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+ 3 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Views\navbar.php(2): session()
+10 APPPATH\Views\index.php(37): include('D:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+11 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+12 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+13 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+14 APPPATH\Controllers\Home.php(9): view('index')
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:39:18 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 D:\xampp\htdocs\bus\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\xampp\htdocs\bus\system\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+#2 D:\xampp\htdocs\bus\system\Config\Services.php(693): CodeIgniter\Session\Session->start()
+#3 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#4 D:\xampp\htdocs\bus\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 D:\xampp\htdocs\bus\system\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+#7 D:\xampp\htdocs\bus\system\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 D:\xampp\htdocs\bus\app\Views\navbar.php(2): session()
+#9 D:\xampp\htdocs\bus\app\Views\index.php(37): include('D:\\xampp\\htdocs...')
+#10 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#11 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('index', Array, true)
+#13 D:\xampp\htdocs\bus\app\Controllers\Home.php(9): view('index')
+#14 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#15 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-06 22:39:46 --> Error: Class "Locale" not found
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 SYSTEMPATH\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(null, null, null)
+ 2 SYSTEMPATH\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+ 3 SYSTEMPATH\Config\Services.php(693): CodeIgniter\Session\Session->start()
+ 4 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 5 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Views\navbar.php(2): session()
+10 APPPATH\Views\index.php(37): include('D:\\xampp\\htdocs\\bus\\app\\Views\\navbar.php')
+11 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\index.php')
+12 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+13 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+14 APPPATH\Controllers\Home.php(9): view('index')
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:39:46 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Class "Locale" not found
+#0 D:\xampp\htdocs\bus\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 D:\xampp\htdocs\bus\system\Session\Session.php(248): CodeIgniter\I18n\Time::now()
+#2 D:\xampp\htdocs\bus\system\Config\Services.php(693): CodeIgniter\Session\Session->start()
+#3 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#4 D:\xampp\htdocs\bus\system\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 D:\xampp\htdocs\bus\system\Config\Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 D:\xampp\htdocs\bus\system\Config\BaseService.php(258): CodeIgniter\Config\Services::session()
+#7 D:\xampp\htdocs\bus\system\Common.php(982): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 D:\xampp\htdocs\bus\app\Views\navbar.php(2): session()
+#9 D:\xampp\htdocs\bus\app\Views\index.php(37): include('D:\\xampp\\htdocs...')
+#10 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#11 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#12 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('index', Array, true)
+#13 D:\xampp\htdocs\bus\app\Controllers\Home.php(9): view('index')
+#14 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#15 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#16 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#18 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-06 22:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 22:40:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Bilet.php on line 17.
+ 1 APPPATH\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\Bilet.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:40:18 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\bus\app\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\xampp\\htdocs...', 17)
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Bilet->index()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-06 22:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 22:41:00 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Bilet.php on line 17.
+ 1 APPPATH\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\Bilet.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:41:00 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(10, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(10, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\bus\app\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\xampp\\htdocs...', 17)
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Bilet->index()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-06 22:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 22:46:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Bilet.php on line 17.
+ 1 APPPATH\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\Bilet.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 22:46:28 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\bus\app\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\xampp\\htdocs...', 17)
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Bilet->index()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-06 22:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 22:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
