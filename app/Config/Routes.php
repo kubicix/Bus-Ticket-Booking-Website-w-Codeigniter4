@@ -24,6 +24,8 @@ $routes->get('/travelGuide', 'TravelGuide::index');
 $routes->get('/services', 'Services::index');
 $routes->get('/user', 'User::index');
 $routes->get('/logout', 'Logout::index');
+$routes->get('/userInf', 'UserInf::index');
+$routes->get('/points', 'Points::index');
 
 $routes->get('obilet', 'Bilet::index');
 $routes->post('obilet', 'Bilet::seferleriListele');
@@ -37,3 +39,4 @@ $routes->post('obilet2', 'Bilet2::buyTicket');
 $routes->get('payment', 'Payment::index');
 $routes->post('payment/process_payment', 'Payment::process_payment');
 $routes->get('success', 'Success::index');
+
