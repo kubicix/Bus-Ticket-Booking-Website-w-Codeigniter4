@@ -158,3 +158,373 @@ INFO - 2024-03-06 14:07:15 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-06 14:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-06 14:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-06 14:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:22:12 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:22:13 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:23:20 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:23:21 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(24): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:30:42 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:30:44 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:30:45 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:30:49 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:30:51 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:31:13 --> ErrorException: mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+
+in APPPATH\Controllers\Bilet.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı.
+', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 41, [...])
+ 2 APPPATH\Controllers\Bilet.php(41): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:31:20 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:31:21 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:31:58 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:31:59 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:01 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:14 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:15 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:22 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:28 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:29 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:36 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:43 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Bilet.php on line 17.
+ 1 APPPATH\Controllers\Bilet.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'D:\\WAMPP\\htdocs\\bus\\app\\Controllers\\Bilet.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:32:58 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 308.
+ 1 APPPATH\Views\obilet.php(308): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 308, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:33:26 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:33:50 --> ErrorException: Undefined variable: cinsiyet
+in APPPATH\Views\obilet.php on line 321.
+ 1 APPPATH\Views\obilet.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cinsiyet', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 321, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(65): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:36:43 --> ErrorException: Undefined variable: seferler
+in APPPATH\Views\obilet.php on line 337.
+ 1 APPPATH\Views\obilet.php(337): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: seferler', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 337, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(74): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-06 14:37:07 --> ErrorException: Undefined variable: seferler
+in APPPATH\Views\obilet.php on line 337.
+ 1 APPPATH\Views\obilet.php(337): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: seferler', 'D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php', 337, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\WAMPP\\htdocs\\bus\\app\\Views\\obilet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('obilet', [], true)
+ 5 APPPATH\Controllers\Bilet.php(74): view('obilet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bilet->seferleriListele()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bilet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 14:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 14:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

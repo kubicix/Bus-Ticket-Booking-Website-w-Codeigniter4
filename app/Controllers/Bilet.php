@@ -8,15 +8,32 @@ class Bilet extends Controller
 {
     public function index()
     {
+        $session = session();
+
+        // Oturumdan kullanıcı bilgilerini alma
+        $auth_user = $session->get('auth_user');
+
+        // Kullanıcı bilgilerini değişkenlere alma
+        $tcno = $auth_user['TcKimlik'];
+        $cinsiyet = $auth_user['Cinsiyeti'];
+
         $seferler = [
             
         ];
         
-        return view('obilet', ['seferler' => $seferler]);
+        return view('obilet', ['seferler' => $seferler, 'cinsiyet' => $cinsiyet]);
     }
 
     public function seferleriListele()
     {
+        $session = session();
+
+        // Oturumdan kullanıcı bilgilerini alma
+        $auth_user = $session->get('auth_user');
+
+        // Kullanıcı bilgilerini değişkenlere alma
+        $tcno = $auth_user['TcKimlik'];
+        $cinsiyet = $auth_user['Cinsiyeti'];
         // Formdan gelen verileri alma
         $kalkisNoktasi = $this->request->getPost('kalkisNoktasi');
         $varisNoktasi = $this->request->getPost('varisNoktasi');
@@ -49,7 +66,8 @@ class Bilet extends Controller
                 $data['seferler'][] = $row;
             }
         }
-
+        
+        $data['cinsiyet'] = $cinsiyet; // cinsiyet değişkenini data dizisine ekle
         // Veritabanı bağlantısını kapatma
         $conn->close();
 

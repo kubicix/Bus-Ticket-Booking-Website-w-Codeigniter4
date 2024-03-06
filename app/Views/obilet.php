@@ -305,6 +305,8 @@
                                     echo 'selected'; ?>>Edirne</option>
                             </select>
                         </div>
+                        <input type="text" id="cinsiyet" value="<?= isset($cinsiyet) ? $cinsiyet : ''; ?>">
+
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -496,6 +498,8 @@
                 koltukNumaralari.forEach(function (koltukNumarasi) {
                     var koltukElement = document.getElementById(koltukNumarasi.trim());
                     var labelElement = koltukElement ? koltukElement.nextElementSibling : null;
+                    // Yan koltuk numarasını hesapla
+                    var yanKoltukNumarasi = hesaplaYanKoltukNumarasi(koltukNumarasi);
 
                     if (koltuk.is_bought == 1) {
                         // Koltuk satın alınmışsa ve 'label' elemanı varsa
@@ -527,9 +531,42 @@
                             }
                         }
                     }
+
+                    // Erkekler ve kadınlar yan yana oturmasın
+                    if (koltukElement && labelElement) {
+                        var cinsiyet = document.getElementById('cinsiyet').value;
+                        var yanKoltukElement = document.getElementById(yanKoltukNumarasi);
+                        if (yanKoltukElement && yanKoltukElement.nextElementSibling && (koltuk.cinsiyet !== cinsiyet)) {
+                            yanKoltukElement.disabled = true;
+                            yanKoltukElement.nextElementSibling.classList.add('disabled-label');
+                        }
+                    }
                 });
             });
         }
+
+        function hesaplaYanKoltukNumarasi(koltukNumarasi, cinsiyet) {
+    var numara = parseInt(koltukNumarasi.match(/\d+/)[0], 10); // Sayısal kısmı al
+    var harf = koltukNumarasi.match(/[a-zA-Z]+/)[0]; // Harf kısmını al
+    var yanNumara;
+
+    if (cinsiyet === 'E') { // Erkek ise
+        if (numara % 2 === 0) { // Çift sayıysa bir önceki numara
+            yanNumara = (numara + 1) + harf;
+        } else { // Tek sayıysa bir sonraki numara
+            yanNumara = (numara - 1) + harf;
+        }
+    } else { // Diğer durumlarda (Bayan gibi)
+        if (numara % 2 === 0) { // Çift sayıysa bir sonraki numara
+            yanNumara = (numara - 1) + harf;
+        } else { // Tek sayıysa bir önceki numara
+            yanNumara = (numara + 1) + harf;
+        }
+    }
+
+    return yanNumara;
+}
+
 
 
     </script>
@@ -579,6 +616,10 @@
                 cabin.appendChild(row);
             }
         });
+    </script>
+
+    <script>
+        
     </script>
 
     <?php include(APPPATH . 'Views/footer.php'); ?>
