@@ -1,0 +1,55 @@
+INFO - 2024-03-06 10:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-06 10:45:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in D:\WAMPP\htdocs\bus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\WAMPP\htdocs\bus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'bus', 3306, '', 0)
+#1 D:\WAMPP\htdocs\bus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\WAMPP\htdocs\bus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\WAMPP\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\WAMPP\htdocs\bus\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\WAMPP\htdocs\bus\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 D:\WAMPP\htdocs\bus\app\Controllers\Authcode.php(21): CodeIgniter\BaseModel->first()
+#7 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#8 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#9 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\WAMPP\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in D:\WAMPP\htdocs\bus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\WAMPP\htdocs\bus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\WAMPP\htdocs\bus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\WAMPP\htdocs\bus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\WAMPP\htdocs\bus\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\WAMPP\htdocs\bus\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 D:\WAMPP\htdocs\bus\app\Controllers\Authcode.php(21): CodeIgniter\BaseModel->first()
+#6 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\Authcode->login()
+#7 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+#8 D:\WAMPP\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\WAMPP\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-03-06 10:45:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `CepTelefon` = :CepTelefon:
+AND `Sifre` = :Sifre:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Authcode.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Authcode->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Authcode))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-06 10:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-06 10:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

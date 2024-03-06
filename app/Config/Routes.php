@@ -32,6 +32,7 @@ $routes->post('authcode/login', 'Authcode::login');
 
 
 $routes->get('obilet2', 'Bilet2::index');
+$routes->post('obilet2', 'Bilet2::buyTicket');
 
 $routes->get('payment', 'Payment::index');
 $routes->post('payment/process_payment', 'Payment::process_payment');

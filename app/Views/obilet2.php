@@ -18,27 +18,39 @@
 
 <body>
     <nav id="navbarContainer">
-    <?php include(APPPATH . 'Views/navbar.php'); ?>
+        <?php include(APPPATH . 'Views/navbar.php'); ?>
     </nav>
 
 
     <div class="container bg-light rounded mb-4">
         <div class="row">
+            
             <div class="col-md-6">
                 <h2 class="font-weight-bold">Bilet Bilgileri</h2>
                 <p><strong>Kalkış Noktası:</strong> <span id="kalkisNoktasi"></span></p>
                 <p><strong>Varış Noktası:</strong> <span id="varisNoktasi"></span></p>
-                <p><strong>Otobüs Plakası:</strong> <span id="otobusPlaka"></span></p>
-                <p><strong>Sefer Tarihi:</strong> <span id="seferTarihi"></span></p>
-                <p><strong>Satın Alınan Koltuklar:</strong> <span id="satınAlınanKoltuklar"></span></p>
+                <p><strong>Otobüs Plakası:</strong> <span id="otobusPlaka" name="otobusPlaka"></span></p>
+                <p><strong>Sefer Tarihi:</strong> <span id="seferTarihi" name="seferTarihi"></span></p>
+                <p><strong>Satın Alınan Koltuklar:</strong> <span id="koltukNo" name="koltukNo"></span></p>
                 <p><strong class="font-weight-bold h2">TOPLAM:</strong> <span id="fiyat"
                         class="font-weight-bold h2 text-danger"></span></p>
             </div>
+            <form method="post" action="<?= base_url('obilet2') ?>">
+                <input type="hidden" id="otobusPlaka1" name="otobusPlaka1">
+                <input type="hidden" id="seferTarihi1" name="seferTarihi1">
+                <input type="hidden" id="koltukNo1" name="koltukNo1">
+                <input type="hidden" id="fiyat1" name="fiyat1">
+            
+                <!-- Form içinde gerekli input veya diğer elemanları ekleyebilirsiniz -->
+                <button type="submit" class="btn btn-success btn-lg" id="buyTicketButton">Satın Al <i
+                        class="fas fa-ticket-alt"></i></button>
+            </form>
 
-            <button class="btn btn-success btn-lg" id="buyTicketButton">Satın Al</button>
 
         </div>
     </div>
+
+
     
 
 
@@ -58,12 +70,17 @@
         document.getElementById('varisNoktasi').textContent = formData.varisNoktasi;
         document.getElementById('otobusPlaka').textContent = formData2.otobusPlaka;
         document.getElementById('seferTarihi').textContent = formData2.seferTarih;
+        
+        document.getElementById('otobusPlaka1').value = formData2.otobusPlaka;
+        document.getElementById('seferTarihi1').value = formData2.seferTarih;
 
+        
         // Eğer koltuklar null ise, boş bir array olarak ayarla
         const seats = selectedSeats || [];
 
         // Satın alınan koltukları yazdır
-        document.getElementById('satınAlınanKoltuklar').textContent = seats.join(', ');
+        document.getElementById('koltukNo').textContent = seats.join(', ');
+        document.getElementById('koltukNo1').value = seats.join(', ');
 
         // Fiyatı hesapla ve yazdır
         const fiyat = seats.length * formData2.seferFiyat;
@@ -75,7 +92,7 @@
 
 
     <div id="footerContainer">
-    <?php include(APPPATH . 'Views/footer.php'); ?>
+        <?php include(APPPATH . 'Views/footer.php'); ?>
     </div>
 
     <!-- <script>

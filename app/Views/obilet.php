@@ -159,11 +159,11 @@
         }
 
         .bought-label {
-            background: red !important; 
+            background: red !important;
         }
 
         .available-label {
-            background: blue !important; 
+            background: blue !important;
         }
 
         @-webkit-keyframes rubberBand {
@@ -347,7 +347,8 @@
                                     <td>
                                         <?= $sefer['sefer_fiyat'] ?>
                                     </td>
-                                    <td><img src="<?= IMG ?>logo-seffaf.png" alt="umuttepe turizm logo" style="height: 100px;"></td>
+                                    <td><img src="<?= IMG ?>logo-seffaf.png" alt="umuttepe turizm logo"
+                                            style="height: 100px;"></td>
                                     <td><button type="button" class="btn btn-success"
                                             onclick="getKoltukListesi('<?= $sefer['otobus_plaka'] ?>', '<?= $sefer['sefer_tarih'] ?>'); getRowData(this)">Koltuk
                                             Listesi Getir</button></td>
@@ -490,37 +491,46 @@
         function koltukListesiniIsle(koltukListesi) {
             // Koltuk listesini işleme
             koltukListesi.forEach(function (koltuk) {
-                var koltukElement = document.getElementById(koltuk.koltuk_no);
-                var labelElement = koltukElement.nextElementSibling; // 'input' elemanının yanındaki 'label' elemanını alır.
+                var koltukNumaralari = koltuk.koltuk_no.split(',');
 
-                if (koltuk.is_bought == 1) {
-                    // Koltuk satın alınmışsa ve 'label' elemanı varsa
-                    koltukElement.disabled = true; // input elemanını disable yap
-                    if (labelElement) {
-                        labelElement.classList.add('bought-label'); // 'label' elemanına 'bought-label' sınıfını ekle
-                        // Koltuk cinsiyetine göre içeriği ayarla
-                        if (koltuk.cinsiyet === 'E') {
-                            labelElement.style.content = 'url(<?= IMG ?>man.png)';
-                        } else {
-                            labelElement.style.content = 'url(<?= IMG ?>woman.png)';
+                koltukNumaralari.forEach(function (koltukNumarasi) {
+                    var koltukElement = document.getElementById(koltukNumarasi.trim());
+                    var labelElement = koltukElement ? koltukElement.nextElementSibling : null;
+
+                    if (koltuk.is_bought == 1) {
+                        // Koltuk satın alınmışsa ve 'label' elemanı varsa
+                        if (koltukElement) {
+                            koltukElement.disabled = true; // input elemanını disable yap
+                        }
+                        if (labelElement) {
+                            labelElement.classList.add('bought-label'); // 'label' elemanına 'bought-label' sınıfını ekle
+                            // Koltuk cinsiyetine göre içeriği ayarla
+                            if (koltuk.cinsiyet === 'E') {
+                                labelElement.style.content = 'url(<?= IMG ?>man.png)';
+                            } else {
+                                labelElement.style.content = 'url(<?= IMG ?>woman.png)';
+                            }
+                        }
+                    } else {
+                        // Koltuk satın alınmamışsa ve 'label' elemanı varsa
+                        if (koltukElement) {
+                            koltukElement.disabled = true; // input elemanını disable yapma
+                        }
+                        if (labelElement) {
+                            labelElement.classList.add('available-label'); // 'label' elemanına 'available-label' sınıfını ekle
+
+                            // Koltuk cinsiyetine göre içeriği ayarla
+                            if (koltuk.cinsiyet === 'E') {
+                                labelElement.style.content = 'url(<?= IMG ?>man.png)';
+                            } else {
+                                labelElement.style.content = 'url(<?= IMG ?>woman.png)';
+                            }
                         }
                     }
-                } else {
-                    // Koltuk satın alınmamışsa ve 'label' elemanı varsa
-                    koltukElement.disabled = true; // input elemanını disable yapma
-                    if (labelElement) {
-                        labelElement.classList.add('available-label'); // 'label' elemanına 'available-label' sınıfını ekle
-
-                        // Koltuk cinsiyetine göre içeriği ayarla
-                        if (koltuk.cinsiyet === 'E') {
-                            labelElement.style.content = 'url(<?= IMG ?>man.png)';
-                        } else {
-                            labelElement.style.content = 'url(<?= IMG ?>woman.png)';
-                        }
-                    }
-                }
+                });
             });
         }
+
 
     </script>
 
