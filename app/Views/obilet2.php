@@ -24,7 +24,7 @@
 
     <div class="container bg-light rounded mb-4">
         <div class="row">
-            
+
             <div class="col-md-6">
                 <h2 class="font-weight-bold">Bilet Bilgileri</h2>
                 <p><strong>Kalkış Noktası:</strong> <span id="kalkisNoktasi"></span></p>
@@ -35,23 +35,43 @@
                 <p><strong class="font-weight-bold h2">TOPLAM:</strong> <span id="fiyat"
                         class="font-weight-bold h2 text-danger"></span></p>
             </div>
-            <form method="post" action="<?= base_url('obilet2') ?>">
+            <form method="post" id="ticketForm" >
                 <input type="hidden" id="otobusPlaka1" name="otobusPlaka1">
                 <input type="hidden" id="seferTarihi1" name="seferTarihi1">
                 <input type="hidden" id="koltukNo1" name="koltukNo1">
                 <input type="hidden" id="fiyat1" name="fiyat1">
-            
-                <!-- Form içinde gerekli input veya diğer elemanları ekleyebilirsiniz -->
+
+                <!-- Satın Al Butonu -->
                 <button type="submit" class="btn btn-success btn-lg" id="buyTicketButton">Satın Al <i
                         class="fas fa-ticket-alt"></i></button>
+
+                <!-- Rezerve Et Butonu -->
+                <button type="submit" class="btn btn-primary btn-lg" id="reserveTicketButton">Rezerve Et <i class="fas fa-book"></i>
+</button>
             </form>
 
 
         </div>
     </div>
-
-
     
+
+
+    <script>
+    // Satın Al butonuna tıklanırsa
+    document.getElementById("buyTicketButton").addEventListener("click", function() {
+        // Satın al işlemi için formu submit et
+        document.getElementById("ticketForm").action = "<?= base_url('obilet2') ?>";
+        document.getElementById("ticketForm").submit();
+    });
+
+    // Rezerve Et butonuna tıklanırsa
+    document.getElementById("reserveTicketButton").addEventListener("click", function() {
+        // Rezerve et işlemi için formu submit et
+        document.getElementById("ticketForm").action = "<?= base_url('user') ?>";
+        document.getElementById("ticketForm").submit();
+    });
+</script>
+
 
 
     <script>
@@ -70,11 +90,11 @@
         document.getElementById('varisNoktasi').textContent = formData.varisNoktasi;
         document.getElementById('otobusPlaka').textContent = formData2.otobusPlaka;
         document.getElementById('seferTarihi').textContent = formData2.seferTarih;
-        
+
         document.getElementById('otobusPlaka1').value = formData2.otobusPlaka;
         document.getElementById('seferTarihi1').value = formData2.seferTarih;
 
-        
+
         // Eğer koltuklar null ise, boş bir array olarak ayarla
         const seats = selectedSeats || [];
 

@@ -23,6 +23,7 @@ $routes->get('/ticketInquiry', 'TicketInquiry::index');
 $routes->get('/travelGuide', 'TravelGuide::index');
 $routes->get('/services', 'Services::index');
 $routes->get('/user', 'User::index');
+$routes->post('/user', 'User::reserveTicket');
 $routes->get('/logout', 'Logout::index');
 $routes->get('/userInf', 'UserInf::index');
 $routes->get('/points', 'Points::index');
@@ -35,6 +36,8 @@ $routes->post('authcode/login', 'Authcode::login');
 
 $routes->get('obilet2', 'Bilet2::index');
 $routes->post('obilet2', 'Bilet2::buyTicket');
+$routes->post('reserveTicket', 'Bilet2::reserveTicket');
+
 
 $routes->get('payment', 'Payment::index');
 $routes->post('payment/process_payment', 'Payment::process_payment');
