@@ -22,9 +22,8 @@ class Payment extends BaseController
         $pid = $this->request->getPost('pid');
         //Kullanıcı Login Olmuş mu?
         if($session->has('auth_user')){
-            echo "SESION";
             //İşlem yapılacak ürünün ID değeri doğru olarak geldi mi?
-            if($pid !== null)
+            if($pid !== null && $pid !== '')
             {
                 $auth_user = $session->get('auth_user');
                 // Kullanıcı TC Kimlik Numarası
@@ -47,7 +46,7 @@ class Payment extends BaseController
                     echo "Veritabanına başarıyla bağlandı.\n";
                 }
                 //SQL sorgusu
-                $sql = "SELECT tickets.*, seferler.*FROM tickets JOIN seferler ON tickets.otobus_plaka = seferler.otobus_plaka WHERE tickets.ticket_id = ?";
+                $sql = "SELECT tickets.*, seferler.* FROM tickets JOIN seferler ON seferler.otobus_plaka=tickets.otobus_plaka and tickets.kalkis_tarih=seferler.sefer_tarih WHERE ticket_id = ?";
                 $stmt = $conn->prepare($sql);
                 if ($stmt === false) {
                     die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
@@ -74,6 +73,7 @@ class Payment extends BaseController
                             "SeferTarihi" => $row["sefer_tarih"],
                         );
                     }
+                    print_r($paymentInfo);
                 } else {
                     echo "Sorgu çalıştırılırken bir hata oluştu: " . $stmt->error;
                 }
@@ -114,11 +114,14 @@ class Payment extends BaseController
                     $paymentInfo[0]["Status"]=$charge->status;
                     $paymentInfo[0]["StripeID"]=$charge->id;
                     $payment->addPayment($paymentInfo[0]);
-                    return redirect()->to(site_url('success?tid='.$charge->id.'&product='.$charge->description));
+                    
+                    return redirect()->to(site_url('success?tid='.$charge->id.'&product='.$paymentInfo[0]['Product']));
                     }else{
                         return redirect()->to(site_url('paymentError.php'));
                     }
                 }
+            }else{
+                echo "Girili Bilet Bilgisi Bulunamadı";
             }
         }else{
             echo "Kullanıcı oturumu bulunamadı.";

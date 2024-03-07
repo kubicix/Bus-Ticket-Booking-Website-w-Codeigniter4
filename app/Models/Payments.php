@@ -22,8 +22,8 @@ class Payment extends Model {
     public function addPayment($data) {
         // Sorguyu hazırla
         $stmt = $this->db->prepare('INSERT INTO payments (TcKimlik, AdiSoyadi, email, StripeID, Product, Amount, Currency, Status, İlkDurak, SonDurak, SeferTarihi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-// Değerleri bağla
-$stmt->bind_param('ssssdssssss', $data['TcKimlik'], $data['AdiSoyadi'], $data['email'], $data['StripeID'], $data['Product'], $data['Amount'], $data['Currency'], $data['Status'], $data['İlkDurak'], $data['SonDurak'], $data['SeferTarihi']);
+        // Değerleri bağla
+        $stmt->bind_param('sssssssssss', $data['TcKimlik'], $data['AdiSoyadi'], $data['email'], $data['StripeID'], $data['Product'], $data['Amount'], $data['Currency'], $data['Status'], $data['İlkDurak'], $data['SonDurak'], $data['SeferTarihi']);
     
         // Sorguyu çalıştır
         if($stmt->execute()) {

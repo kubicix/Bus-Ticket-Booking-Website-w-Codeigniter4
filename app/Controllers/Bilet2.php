@@ -73,20 +73,30 @@ class Bilet2 extends Controller
 
             // Parametreleri sorguya bağlama
             $stmt->bind_param("sssssis", $kalkisTarihi, $tcno, $cinsiyet, $otobusPlakasi, $koltukNo, $is_bought, $ticket_date);
-
             // Insert işlemi sonrası bilgi yazdırma
+
+
             if ($stmt->execute()) {
                 echo "Bilet başarıyla veritabanına eklendi.\n";
-                $last_id = $conn->insert_id;
-                return redirect()->to(site_url('payment?pid=' . $last_id));
+                $sql = "SELECT ticket_id FROM tickets ORDER BY ticket_id DESC LIMIT 1";
+                $result = $conn->query($sql);           
+                if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $last_ticket_id = $row['ticket_id'];
+                    $stmt->close();
+                    $conn->close();
+                    return redirect()->to(site_url('payment?pid=' . $last_ticket_id));
+                } else {
+                    echo "Bilet eklenirken bir hata oluştu veya sonuç bulunamadı.";
+                }
+                // $last_id = $conn->insert_id -1 ;
+                // // Statement ve bağlantıyı kapatma
+                // $stmt->close();
+                // $conn->close();
+                // return redirect()->to(site_url('payment?pid=' . $last_id));
             } else {
                 echo "Bilet eklenirken bir hata oluştu: " . $stmt->error . "\n" . $kalkisTarihi, $tcno, $cinsiyet, $otobusPlakasi, $koltukNo, $is_bought, $ticket_date;
             }
-
-            // Statement ve bağlantıyı kapatma
-            $stmt->close();
-            $conn->close();
-
             // Yönlendirme yerine alert kullanarak mesaj göster
             // echo "<script>alert('Bilet başarıyla satın alındı!');</script>";
             // return redirect()->to(site_url('payment?tid='.$last_id));

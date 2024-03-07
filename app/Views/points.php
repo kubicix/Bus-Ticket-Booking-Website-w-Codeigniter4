@@ -178,10 +178,10 @@ include 'config.php';
                             die("Veritabanına bağlanılamadı: " . $conn->connect_error);
                         } else {
                             $sql = "SELECT tickets.*, payments.* 
-                            FROM tickets 
-                            JOIN payments ON tickets.tcno = payments.TcKimlik
-                            WHERE payments.TcKimlik = ?
-                            GROUP BY tickets.ticket_id;";
+                                    FROM tickets 
+                                    JOIN payments ON tickets.tcno = payments.TcKimlik
+                                    WHERE payments.TcKimlik = ?
+                                    GROUP BY payments.created_at";
 
                             $stmt = $conn->prepare($sql);
                             if ($stmt === false) {
@@ -190,15 +190,20 @@ include 'config.php';
                             $stmt->bind_param('s', $userTC);
                             $stmt->execute(); // Sorguyu çalıştır
                             $result = $stmt->get_result(); // Sonuçları al
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<tr>";
+
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<tr>";
                                     echo "<td>" . $row['created_at'] . "</td>";
                                     echo "<td>" . $row['SeferTarihi'] . "</td>";
                                     echo "<td>" . $row['İlkDurak'] . "</td>";
                                     echo "<td>" . $row['SonDurak'] . "</td>";
                                     echo "<td>" . $row['koltuk_no'] . "</td>";
                                     echo "<td>" . $row['ticket_date'] . "</td>";
-                                echo "</tr>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "Hiçbir sonuç bulunamadı.";
                             }
                         }
                     }
