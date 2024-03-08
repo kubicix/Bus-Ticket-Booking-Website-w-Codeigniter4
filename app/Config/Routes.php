@@ -47,6 +47,15 @@ $routes->get('adminIndex', 'AdminController::index');
 
 $routes->get('adminBus', 'AdminController::adminBus');
 $routes->get('adminBus/delete/(:num)', 'AdminController::deleteBus/$1');
+$routes->post('adminBus/update/(:num)', 'AdminController::busUpdate/$1');
+$routes->post('adminBus/add', 'AdminController::addBus');
+
+$routes->get('adminSefer', 'AdminController::adminSefer');
+$routes->post('adminSefer/add', 'AdminController::addSefer');
+$routes->post('adminSefer/update/(:num)', 'AdminController::updateSefer/$1');
+$routes->get('adminSefer/delete/(:num)', 'AdminController::deleteSefer/$1');
+
+
 
 $routes->get('adminTicket', 'AdminController::adminTicket');
 $routes->get('adminSefer', 'AdminController::adminSefer');
