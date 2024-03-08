@@ -177,11 +177,20 @@ include 'config.php';
                         if ($conn->connect_error) {
                             die("Veritabanına bağlanılamadı: " . $conn->connect_error);
                         } else {
-                            $sql = "SELECT tickets.*, payments.* 
-                                    FROM tickets 
-                                    JOIN payments ON tickets.tcno = payments.TcKimlik
-                                    WHERE payments.TcKimlik = ?
-                                    GROUP BY payments.created_at";
+                            $sql = "SELECT
+            tickets.ticket_date AS 'İşlem Tarihi',
+            seferler.sefer_tarih AS 'Sefer Tarihi',
+            SUBSTRING_INDEX(seferler.kalkis_yeri, ',', 1) AS 'İlk Durak',
+            SUBSTRING_INDEX(seferler.varis_yeri, ',', 1) AS 'Son Durak',
+            tickets.koltuk_no AS 'Koltuk',
+            tickets.ticket_date AS 'Bilet Tarihi' 
+        FROM
+            tickets
+        JOIN seferler ON tickets.otobus_plaka = seferler.otobus_plaka
+            AND tickets.kalkis_tarih = seferler.sefer_tarih
+        WHERE
+            tickets.tcno = ?";
+
 
                             $stmt = $conn->prepare($sql);
                             if ($stmt === false) {
@@ -190,20 +199,16 @@ include 'config.php';
                             $stmt->bind_param('s', $userTC);
                             $stmt->execute(); // Sorguyu çalıştır
                             $result = $stmt->get_result(); // Sonuçları al
-
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    echo "<tr>";
-                                    echo "<td>" . $row['created_at'] . "</td>";
-                                    echo "<td>" . $row['SeferTarihi'] . "</td>";
-                                    echo "<td>" . $row['İlkDurak'] . "</td>";
-                                    echo "<td>" . $row['SonDurak'] . "</td>";
-                                    echo "<td>" . $row['koltuk_no'] . "</td>";
-                                    echo "<td>" . $row['ticket_date'] . "</td>";
-                                    echo "</tr>";
-                                }
-                            } else {
-                                echo "Hiçbir sonuç bulunamadı.";
+                    
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row['İşlem Tarihi'] . "</td>"; // 'İşlem Tarihi' olarak değiştirildi
+                                echo "<td>" . $row['Sefer Tarihi'] . "</td>"; // 'Sefer Tarihi' olarak değiştirildi
+                                echo "<td>" . $row['İlk Durak'] . "</td>"; // 'İlk Durak' olarak değiştirildi
+                                echo "<td>" . $row['Son Durak'] . "</td>"; // 'Son Durak' olarak değiştirildi
+                                echo "<td>" . $row['Koltuk'] . "</td>"; // 'Koltuk' olarak değiştirildi
+                                echo "<td>" . $row['Bilet Tarihi'] . "</td>"; // 'Bilet Tarihi' olarak değiştirildi
+                                echo "</tr>";
                             }
                         }
                     }

@@ -12,7 +12,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
-
+        /* Haritayı içeren div elemanının boyutunu belirlemek için haritayı yükseklik olarak belirtin. */
+      #map {
+        height: 100%;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
     </style>
 </head>
 
@@ -52,9 +68,56 @@
 
 
         </div>
+        <div class="card mb-4 mt-4">
+            <div class="card-body">
+                <div class="mb-3">
+                    <div id="map" style="height: 600px; width: auto;"></div> <!-- Harita alanı -->
+                </div>
+            </div>
+        </div>
     </div>
     
 
+    <script>
+      function initMap() {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 7,
+        center: {lat: 39.9255, lng: 32.8660} // Türkiye'nin koordinatları (Ortalama)
+    });
+    directionsDisplay.setMap(map);
+
+    // Sayfa yüklendiğinde rota hesaplaması yap
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+}
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    var kalkisNoktasi = document.getElementById('kalkisNoktasi').textContent; // .textContent ile DOM'daki metni alıyoruz
+    var varisNoktasi = document.getElementById('varisNoktasi').textContent; // .textContent ile DOM'daki metni alıyoruz
+
+    if(kalkisNoktasi && varisNoktasi) { // Eğer kalkış ve varış noktaları varsa rota hesapla
+        directionsService.route({
+            origin: kalkisNoktasi,
+            destination: varisNoktasi,
+            travelMode: 'DRIVING'
+        }, function(response, status) {
+            if (status === 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Yönler isteği ' + status + ' nedeniyle başarısız oldu.');
+            }
+        });
+    }
+}
+
+// Sayfa yüklendiğinde initMap fonksiyonunu çağır
+document.addEventListener('DOMContentLoaded', function() {
+    initMap();
+});
+    </script>
+    <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_BURAYA&callback=initMap"></script>
 
     <script>
     // Satın Al butonuna tıklanırsa

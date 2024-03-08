@@ -73,7 +73,7 @@
                 Bilet İşlemleri
               </div>
               <div class="card-body">
-                <form>
+                <form method="GET" action="<?= base_url('obilet') ?>">
                   <div class="mb-3">
                     <label for="kalkisNoktasi" class="form-label">Kalkış Noktası</label>
                     <select class="form-select" id="start" required>
@@ -202,7 +202,7 @@
     </script> -->
 
     <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEYI_BURAYA_GIR&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_BURAYA&callback=initMap"></script>
     <script src="../js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
