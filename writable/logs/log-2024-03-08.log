@@ -113,3 +113,691 @@ INFO - 2024-03-08 11:06:25 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-08 11:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-08 11:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-08 11:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 11:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 13:29:20 --> Error: Call to a member function setDefaultController() on array
+in APPPATH\Config\Routes.php on line 47.
+ 1 SYSTEMPATH\Router\RouteCollection.php(345): require()
+ 2 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 13:29:20 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Call to a member function setDefaultController() on array
+#0 D:\xampp\htdocs\bus\system\Router\RouteCollection.php(345): require()
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 13:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 13:32:10 --> ErrorException: Undefined variable $isLoggedIn
+in APPPATH\Views\adminNavbar.php on line 30.
+ 1 APPPATH\Views\adminNavbar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isLoggedIn', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminNavbar.php', 30)
+ 2 APPPATH\Views\adminIndex.php(18): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminNavbar.php')
+ 3 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminIndex.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminIndex', [], true)
+ 6 APPPATH\Controllers\AdminController.php(13): view('adminIndex')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 13:32:10 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $isLoggedIn
+#0 D:\xampp\htdocs\bus\app\Views\adminNavbar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 30)
+#1 D:\xampp\htdocs\bus\app\Views\adminIndex.php(18): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminIndex', Array, true)
+#5 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(13): view('adminIndex')
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->index()
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-08 13:32:26 --> ErrorException: Undefined variable $isLoggedIn
+in APPPATH\Views\adminNavbar.php on line 30.
+ 1 APPPATH\Views\adminNavbar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isLoggedIn', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminNavbar.php', 30)
+ 2 APPPATH\Views\adminIndex.php(18): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminNavbar.php')
+ 3 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminIndex.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminIndex', [], true)
+ 6 APPPATH\Controllers\AdminController.php(13): view('adminIndex')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 13:32:26 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $isLoggedIn
+#0 D:\xampp\htdocs\bus\app\Views\adminNavbar.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 30)
+#1 D:\xampp\htdocs\bus\app\Views\adminIndex.php(18): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminIndex', Array, true)
+#5 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(13): view('adminIndex')
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->index()
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 13:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 13:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 14:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 15:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 15:53:44 --> ErrorException: Undefined variable $otobusler
+in APPPATH\Views\adminBus.php on line 34.
+ 1 APPPATH\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $otobusler', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(19): view('adminBus')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:53:44 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $otobusler
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 34)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(19): view('adminBus')
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-03-08 15:55:16 --> mysqli_sql_exception: Table 'bus.otobusler' doesn't exist in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM o...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM o...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM o...')
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM o...')
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-08 15:55:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.otobusler' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\AdminController.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM otobusler')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:55:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bus.otobusler' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM otobusler')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM otobusler')
+ 3 APPPATH\Controllers\AdminController.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM otobusler')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:55:16 --> [Caused by] mysqli_sql_exception: Table 'bus.otobusler' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM otobusler', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM otobusler')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM otobusler')
+ 4 APPPATH\Controllers\AdminController.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM otobusler')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:55:16 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+Table 'bus.otobusler' doesn't exist
+#0 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM o...')
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 15:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 15:55:34 --> ErrorException: Undefined variable $otobusler
+in APPPATH\Views\adminBus.php on line 34.
+ 1 APPPATH\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $otobusler', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(26): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:55:34 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(10, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(10, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $otobusler
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 34)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(26): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 15:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 15:55:43 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 4 APPPATH\Controllers\AdminController.php(26): view('adminBus', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:55:43 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(10, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(10, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\bus\system\View\View.php(228): include()
+#1 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(26): view('adminBus', Array)
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 15:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 15:56:24 --> ErrorException: Undefined variable $otobusler
+in APPPATH\Views\adminBus.php on line 34.
+ 1 APPPATH\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $otobusler', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 34)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(26): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:56:24 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(10, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(10, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $otobusler
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 34)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(26): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 15:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 15:57:10 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 4 APPPATH\Controllers\AdminController.php(26): view('adminBus', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 15:57:10 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(10, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(10, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(Error), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(Error), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#8 {main}
+  thrown
+【Previous Exception】
+Error
+Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\bus\system\View\View.php(228): include()
+#1 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(26): view('adminBus', Array)
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 15:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 16:00:44 --> ErrorException: Attempt to read property "otobus_id" on array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 APPPATH\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "otobus_id" on array', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(32): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 16:00:44 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Attempt to read property "otobus_id" on array
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(32): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 16:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 16:00:45 --> ErrorException: Attempt to read property "otobus_id" on array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 APPPATH\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "otobus_id" on array', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(32): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 16:00:45 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Attempt to read property "otobus_id" on array
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(32): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 16:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 16:00:46 --> ErrorException: Attempt to read property "otobus_id" on array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 APPPATH\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "otobus_id" on array', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(32): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 16:00:46 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Attempt to read property "otobus_id" on array
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(32): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 16:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 16:00:51 --> ErrorException: Attempt to read property "otobus_id" on array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 APPPATH\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "otobus_id" on array', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(32): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 16:00:51 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(12, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(12, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(12582912)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Attempt to read property "otobus_id" on array
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(32): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 16:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-08 16:01:04 --> ErrorException: Attempt to read property "otobus_id" on array
+in APPPATH\Views\adminBus.php on line 36.
+ 1 APPPATH\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "otobus_id" on array', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminBus.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminBus', [], true)
+ 5 APPPATH\Controllers\AdminController.php(32): view('adminBus', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-08 16:01:04 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Attempt to read property "otobus_id" on array
+#0 D:\xampp\htdocs\bus\app\Views\adminBus.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminBus', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(32): view('adminBus', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminBus()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-08 16:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-08 16:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

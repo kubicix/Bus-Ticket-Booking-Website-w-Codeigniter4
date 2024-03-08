@@ -22,14 +22,15 @@ class Authcode extends Controller
             ->where('Sifre', $Sifre)
             ->first();
 
-        if ($user) {
-            $session->set('isLoggedIn', true);
-            $session->set('auth_user', [
-                'AdiSoyadi' => $user['AdiSoyadi'],
-                'EMail' => $user['EMail'],
-                'TcKimlik' => $user['TcKimlik'],
-                'Cinsiyeti' => $user['Cinsiyeti']
-            ]);
+            if ($user) {
+                $session->set('isLoggedIn', true);
+                $session->set('auth_user', [
+                    'AdiSoyadi' => $user['AdiSoyadi'],
+                    'EMail' => $user['EMail'],
+                    'TcKimlik' => $user['TcKimlik'],
+                    'Cinsiyeti' => $user['Cinsiyeti'],
+                    'is_admin' => $user['is_admin'] // isAdmin bilgisini oturum verilerine ekleyin
+                ]);
 
             return redirect()->to('user');
         } else {

@@ -43,3 +43,14 @@ $routes->get('payment', 'Payment::index');
 $routes->post('payment/process_payment', 'Payment::process_payment');
 $routes->get('success', 'Success::index');
 
+$routes->get('adminIndex', 'AdminController::index');
+
+$routes->get('adminBus', 'AdminController::adminBus');
+$routes->get('adminBus/delete/(:num)', 'AdminController::deleteBus/$1');
+
+$routes->get('adminTicket', 'AdminController::adminTicket');
+$routes->get('adminSefer', 'AdminController::adminSefer');
+$routes->get('adminBalance', 'AdminController::adminBalance');
+$routes->get('adminPayment', 'AdminController::adminPayment');
+$routes->get('adminUser', 'AdminController::adminUser');
+
