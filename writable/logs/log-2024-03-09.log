@@ -1,0 +1,641 @@
+INFO - 2024-03-09 10:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-09 10:22:58 --> ErrorException: Undefined variable $tickets
+in APPPATH\Views\adminTicket.php on line 37.
+ 1 APPPATH\Views\adminTicket.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tickets', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminTicket.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminTicket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminTicket', [], true)
+ 5 APPPATH\Controllers\AdminController.php(167): view('adminTicket')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminTicket()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 10:22:58 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $tickets
+#0 D:\xampp\htdocs\bus\app\Views\adminTicket.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 37)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminTicket', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(167): view('adminTicket')
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminTicket()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 10:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 10:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-09 10:54:52 --> ErrorException: Undefined variable $users
+in APPPATH\Views\adminUser.php on line 36.
+ 1 APPPATH\Views\adminUser.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminUser.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminUser.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminUser', [], true)
+ 5 APPPATH\Controllers\AdminController.php(261): view('adminUser')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 10:54:53 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined variable $users
+#0 D:\xampp\htdocs\bus\app\Views\adminUser.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminUser', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(261): view('adminUser')
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-09 11:11:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "{0}"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminUser/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminUser/index', [], true)
+ 3 APPPATH\Controllers\AdminController.php(266): view('adminUser/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->userIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:11:21 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\View\Exceptions\ViewException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\View\Exceptions\ViewException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\View\Exceptions\ViewException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\View\Exceptions\ViewException
+Invalid file: "{0}"
+#0 D:\xampp\htdocs\bus\system\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminUser/index...')
+#1 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminUser/index', Array, true)
+#2 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(266): view('adminUser/index', Array)
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->userIndex()
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 11:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-09 11:22:19 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2024-03-09 11:22:19 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2024-03-09 11:22:19 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2024-03-09 11:22:19 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-03-09 11:22:19 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 3 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 3 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 3 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM users', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 4 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 3 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM users', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 4 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM users', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 4 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM users', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users')
+ 4 APPPATH\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:22:19 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+MySQL server has gone away
+#0 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-09 11:22:19 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+MySQL server has gone away
+#0 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-09 11:22:19 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+MySQL server has gone away
+#0 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-09 11:22:19 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(14, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(14, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(14680064)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+MySQL server has gone away
+#0 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(267): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#1 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminUser()
+#2 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#3 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 11:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-09 11:36:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bus`.`balances`, CONSTRAINT `balances_ibfk_1` FOREIGN KEY (`TcKimlik`) REFERENCES `users` (`TcKimlik`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ba...', 0)
+#1 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 D:\xampp\htdocs\bus\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 D:\xampp\htdocs\bus\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 D:\xampp\htdocs\bus\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\bus\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\bus\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(275): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->addBalance()
+#9 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-09 11:36:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bus`.`balances`, CONSTRAINT `balances_ibfk_1` FOREIGN KEY (`TcKimlik`) REFERENCES `users` (`TcKimlik`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (:TcKimlik:, :TotalBalance:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminController.php(275): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->addBalance()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:36:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bus`.`balances`, CONSTRAINT `balances_ibfk_1` FOREIGN KEY (`TcKimlik`) REFERENCES `users` (`TcKimlik`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (\'3131\', \'3131\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (\'3131\', \'3131\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (:TcKimlik:, :TotalBalance:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminController.php(275): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->addBalance()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:36:41 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bus`.`balances`, CONSTRAINT `balances_ibfk_1` FOREIGN KEY (`TcKimlik`) REFERENCES `users` (`TcKimlik`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (\'3131\', \'3131\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (\'3131\', \'3131\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (\'3131\', \'3131\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `balances` (`TcKimlik`, `TotalBalance`) VALUES (:TcKimlik:, :TotalBalance:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminController.php(275): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->addBalance()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:36:41 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(16, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(16, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(16777216)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Database\Exceptions\DatabaseException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 8)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+Cannot add or update a child row: a foreign key constraint fails (`bus`.`balances`, CONSTRAINT `balances_ibfk_1` FOREIGN KEY (`TcKimlik`) REFERENCES `users` (`TcKimlik`) ON DELETE CASCADE ON UPDATE CASCADE)
+#0 D:\xampp\htdocs\bus\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#1 D:\xampp\htdocs\bus\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#2 D:\xampp\htdocs\bus\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#3 D:\xampp\htdocs\bus\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(275): CodeIgniter\Model->insert(Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->addBalance()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 11:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-09 11:46:30 --> ErrorException: Undefined property: stdClass::$id
+in APPPATH\Views\adminPayment.php on line 53.
+ 1 APPPATH\Views\adminPayment.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminPayment.php', 53)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminPayment.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminPayment', [], true)
+ 5 APPPATH\Controllers\AdminController.php(321): view('adminPayment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:46:30 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(18, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(18, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(18874368)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined property: stdClass::$id
+#0 D:\xampp\htdocs\bus\app\Views\adminPayment.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminPayment', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(321): view('adminPayment', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminPayment()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 11:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-09 11:47:42 --> ErrorException: Undefined property: stdClass::$id
+in APPPATH\Views\adminPayment.php on line 67.
+ 1 APPPATH\Views\adminPayment.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'D:\\xampp\\htdocs\\bus\\app\\Views\\adminPayment.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\adminPayment.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminPayment', [], true)
+ 5 APPPATH\Controllers\AdminController.php(321): view('adminPayment', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->adminPayment()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-09 11:47:42 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(20, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(20, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(20971520)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined property: stdClass::$id
+#0 D:\xampp\htdocs\bus\app\Views\adminPayment.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 67)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('adminPayment', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\AdminController.php(321): view('adminPayment', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\AdminController->adminPayment()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-09 11:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-09 11:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

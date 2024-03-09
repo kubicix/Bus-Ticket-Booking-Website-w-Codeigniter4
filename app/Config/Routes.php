@@ -55,11 +55,27 @@ $routes->post('adminSefer/add', 'AdminController::addSefer');
 $routes->post('adminSefer/update/(:num)', 'AdminController::updateSefer/$1');
 $routes->get('adminSefer/delete/(:num)', 'AdminController::deleteSefer/$1');
 
-
-
 $routes->get('adminTicket', 'AdminController::adminTicket');
+$routes->post('adminTicket/add', 'AdminController::addTicket');
+$routes->get('adminTicket/delete/(:num)', 'AdminController::deleteTicket/$1');
+$routes->post('adminTicket/update/(:num)', 'AdminController::updateTicket/$1');
+
 $routes->get('adminSefer', 'AdminController::adminSefer');
+
 $routes->get('adminBalance', 'AdminController::adminBalance');
+$routes->post('adminBalance/add', 'AdminController::addBalance');
+$routes->get('adminBalance/delete/(:num)', 'AdminController::deleteBalance/$1');
+$routes->post('adminBalance/update/(:num)', 'AdminController::updateBalance/$1');
+
+
 $routes->get('adminPayment', 'AdminController::adminPayment');
+
+
 $routes->get('adminUser', 'AdminController::adminUser');
+    // $routes->post('adminUser/add', 'AdminController::userAdd');
+    $routes->get('adminUser/delete/(:num)', 'AdminController::userDelete/$1');
+    $routes->post('adminUser/update/(:num)', 'AdminController::userUpdate/$1');
+
+    
+
 

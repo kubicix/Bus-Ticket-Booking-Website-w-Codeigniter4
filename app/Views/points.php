@@ -178,18 +178,21 @@ include 'config.php';
                             die("Veritabanına bağlanılamadı: " . $conn->connect_error);
                         } else {
                             $sql = "SELECT
-            tickets.ticket_date AS 'İşlem Tarihi',
-            seferler.sefer_tarih AS 'Sefer Tarihi',
-            SUBSTRING_INDEX(seferler.kalkis_yeri, ',', 1) AS 'İlk Durak',
-            SUBSTRING_INDEX(seferler.varis_yeri, ',', 1) AS 'Son Durak',
-            tickets.koltuk_no AS 'Koltuk',
-            tickets.ticket_date AS 'Bilet Tarihi' 
-        FROM
-            tickets
-        JOIN seferler ON tickets.otobus_plaka = seferler.otobus_plaka
-            AND tickets.kalkis_tarih = seferler.sefer_tarih
-        WHERE
-            tickets.tcno = ?";
+                            tickets.ticket_date AS 'İşlem Tarihi',
+                            seferler.sefer_tarih AS 'Sefer Tarihi',
+                            SUBSTRING_INDEX(seferler.kalkis_yeri, ',', 1) AS 'İlk Durak',
+                            SUBSTRING_INDEX(seferler.varis_yeri, ',', 1) AS 'Son Durak',
+                            tickets.koltuk_no AS 'Koltuk',
+                            tickets.ticket_date AS 'Bilet Tarihi' 
+                        FROM
+                            tickets
+                        JOIN seferler ON tickets.otobus_plaka = seferler.otobus_plaka
+                            AND tickets.kalkis_tarih = seferler.sefer_tarih
+                        WHERE
+                            tickets.tcno = ?
+                        ORDER BY
+                            tickets.ticket_date DESC; -- Tarihe göre en yeni kayıtların en üstte olması için sıralama yapılır
+                        ";
 
 
                             $stmt = $conn->prepare($sql);
