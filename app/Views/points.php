@@ -165,6 +165,7 @@ include 'config.php';
                     <th scope="col">Son Durak</th>
                     <th scope="col">Koltuk</th>
                     <th scope="col">Bilet Tarihi</th>
+                    <th scope="col">Bilet Detay</th>
                 </tr>
             </thead>
             <tbody>
@@ -183,7 +184,8 @@ include 'config.php';
                             SUBSTRING_INDEX(seferler.kalkis_yeri, ',', 1) AS 'İlk Durak',
                             SUBSTRING_INDEX(seferler.varis_yeri, ',', 1) AS 'Son Durak',
                             tickets.koltuk_no AS 'Koltuk',
-                            tickets.ticket_date AS 'Bilet Tarihi' 
+                            tickets.ticket_date AS 'Bilet Tarihi',
+                            tickets.ticket_id AS 'ticket id'
                         FROM
                             tickets
                         JOIN seferler ON tickets.otobus_plaka = seferler.otobus_plaka
@@ -211,6 +213,12 @@ include 'config.php';
                                 echo "<td>" . $row['Son Durak'] . "</td>"; // 'Son Durak' olarak değiştirildi
                                 echo "<td>" . $row['Koltuk'] . "</td>"; // 'Koltuk' olarak değiştirildi
                                 echo "<td>" . $row['Bilet Tarihi'] . "</td>"; // 'Bilet Tarihi' olarak değiştirildi
+                                echo "<td>";
+                                echo "<form action='/bus/ticketDetail' method='GET'>";
+                                echo "<input type='hidden' name='ticketID' value='" . $row['ticket id'] . "'>";
+                                echo "<button type='submit' class='btn btn-primary'>Detay</button>";
+                                echo "</form>";
+                                echo "</td>";
                                 echo "</tr>";
                             }
                         }

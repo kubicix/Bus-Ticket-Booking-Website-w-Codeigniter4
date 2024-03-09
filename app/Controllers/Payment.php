@@ -42,8 +42,6 @@ class Payment extends BaseController
                 $conn = new \mysqli("localhost", "root", "", "bus");
                 if ($conn->connect_error) {
                     die("Veritabanına bağlanılamadı: " . $conn->connect_error);
-                } else {
-                    echo "Veritabanına başarıyla bağlandı.\n";
                 }
                 //SQL sorgusu
                 $sql = "SELECT tickets.*, seferler.* FROM tickets JOIN seferler ON seferler.otobus_plaka=tickets.otobus_plaka and tickets.kalkis_tarih=seferler.sefer_tarih WHERE ticket_id = ?";

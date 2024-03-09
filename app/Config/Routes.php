@@ -38,6 +38,10 @@ $routes->get('obilet2', 'Bilet2::index');
 $routes->post('obilet2', 'Bilet2::buyTicket');
 $routes->post('reserveTicket', 'Bilet2::reserveTicket');
 
+$routes->get('ticketDetail', 'TicketDetail::index');
+$routes->post('ticketDetail/buyTicket', 'TicketDetail::BuyTicket');
+$routes->post('ticketDetail/deniedTicket', 'TicketDetail::DeleteTicket');
+
 
 $routes->get('payment', 'Payment::index');
 $routes->post('payment/process_payment', 'Payment::process_payment');
