@@ -57,7 +57,7 @@
                     $stmt->execute();
                     $result = $stmt->get_result();
                     $row = $result->fetch_assoc();
-        ?>
+        ?> 
         <div class="row custom-border">
             <div class="col-md-9">İşlem Tarihi</div>
             <div class="col-md-3" style="text-align: right; "><?php echo $row['İşlem Tarihi']; ?></div>

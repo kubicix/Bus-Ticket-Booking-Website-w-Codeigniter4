@@ -9,7 +9,7 @@ class TicketDetail extends BaseController
     {
         $data['ticketID'] = $this->request->getVar('ticketID');
         $session = session();
-        if($session->has('auth_user')){
+        if ($session->has('auth_user')) {
             $auth_user = $session->get('auth_user');
             $userTC = $auth_user['TcKimlik'];
             $conn = new \mysqli("localhost", "root", "", "bus");
@@ -27,7 +27,7 @@ class TicketDetail extends BaseController
             // Sorguyu çalıştırma
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
-                
+
                 // Sorgudan gelen veri var mı kontrolü
                 if ($result->num_rows > 0) {
                     // Veri varsa, ticketDetail sayfasına yönlendirme
@@ -44,54 +44,6 @@ class TicketDetail extends BaseController
     }
     public function BuyTicket()
     {
-        $ticketID = $this->request->getPost('ticketID');
-        $session = session();
-        if($session->has('auth_user')){
-            $auth_user = $session->get('auth_user');
-            $userTC = $auth_user['TcKimlik'];
-            $conn = new \mysqli("localhost", "root", "", "bus");
-            if ($conn->connect_error) {
-                die("Veritabanına bağlanılamadı: " . $conn->connect_error);
-            }
-            $sql = "SELECT * FROM tickets WHERE ticket_id = ? AND tcno = ?";
-            $stmt = $conn->prepare($sql);
-            if ($stmt === false) {
-                die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
-            }
-            // Parametreleri bind etme
-            $stmt->bind_param("ss", $ticketID, $userTC); // "i" parametresi integer olduğunu belirtir
-            // Sorguyu çalıştırma
-            if ($stmt->execute()) {
-                $result = $stmt->get_result();
-                
-                if ($result->num_rows > 0) {
-                    $updateSql = "UPDATE tickets SET is_bought = 1 WHERE ticket_id = ? AND tcno = ?";
-                    $updateStmt = $conn->prepare($updateSql);
-                    if ($updateStmt === false) {
-                        die("Güncelleme sorgusu hazırlanırken bir hata oluştu: " . $conn->error);
-                    }
-                    
-                    // Parametreleri bind etme
-                    $updateStmt->bind_param("ss", $ticketID, $userTC);
-                    
-                    // Güncelleme sorgusunu çalıştırma
-                    if ($updateStmt->execute()) {
-                        // Güncelleme başarılı ise ödeme sayfasına yönlendirme yapabilirsiniz
-                        return redirect()->to(site_url('payment?pid=' . $ticketID));
-                    } else {
-                        // Güncelleme başarısız ise hata mesajı ver
-                        die("Güncelleme işlemi başarısız: " . $updateStmt->error);
-                    }
-                } else {
-                    return redirect()->to('index');
-                }
-            }
-        }
-    }
-
-    public function DeleteTicket(){
-        require_once(APPPATH . 'Models/Payments.php');
-        require_once(APPPATH . 'Models/Balances.php');
         $ticketID = $this->request->getPost('ticketID');
         $session = session();
         if ($session->has('auth_user')) {
@@ -111,75 +63,85 @@ class TicketDetail extends BaseController
             // Sorguyu çalıştırma
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
-        
+
                 if ($result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                    $TcKimlik = $row['tcno'];
-                    $Kalkis_Tarih = $row['kalkis_tarih'];
-                    $koltukNo = $row['koltuk_no'];
-                    
-                    echo $TcKimlik . "<br>";
-                    echo $Kalkis_Tarih . "<br>";
-                    echo $koltukNo . "<br>";
-        
-                    $findPayment = "SELECT * FROM payments WHERE TcKimlik = ? AND SeferTarihi = ? and Product = ?";
-                    $stmtPayment = $conn->prepare($findPayment);
-                    if ($stmtPayment === false) {
-                        die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
+                    $updateSql = "UPDATE tickets SET is_bought = 1 WHERE ticket_id = ? AND tcno = ?";
+                    $updateStmt = $conn->prepare($updateSql);
+                    if ($updateStmt === false) {
+                        die("Güncelleme sorgusu hazırlanırken bir hata oluştu: " . $conn->error);
                     }
-                    $stmtPayment->bind_param("sss", $TcKimlik, $Kalkis_Tarih, $koltukNo);
-                    if ($stmtPayment->execute()) {
-                        $paymentResult = $stmtPayment->get_result();
-                        if ($paymentResult->num_rows > 0) {
-                            $data = $paymentResult->fetch_assoc();
-                            $amount = $data["Amount"];
-                            $balance = new \App\Models\GetCustomerBalance();
-                            $customer = $balance->getBalance($userTC);
-                            $total_balance = $customer->TotalBalance;
-                            $newBalance = array(
-                                "TotalBalance" => ($total_balance + $amount),
-                                "TcKimlik" => $userTC,
-                            );
-                            $updateBalanceStatus=$balance->UpdateTotal($newBalance);
-                            echo $total_balance + $amount;
 
-                            $updatePayment = "UPDATE payments SET Status = 'returned' WHERE TcKimlik = ? AND SeferTarihi = ? AND Product = ?";
-                            $stmtUpdatePayment = $conn->prepare($updatePayment);
-                            if ($stmtUpdatePayment === false) {
-                                die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
-                            }
+                    // Parametreleri bind etme
+                    $updateStmt->bind_param("ss", $ticketID, $userTC);
 
-                            // Parametreleri bind etme
-                            $stmtUpdatePayment->bind_param("sss", $TcKimlik, $Kalkis_Tarih, $koltukNo);
-                            if ($stmtUpdatePayment->execute()) {
-                                echo "Sorgu başarıyla çalıştırıldı, ödemeler güncellendi.";
-                            } else {
-                                echo "Sorgu çalıştırılırken bir hata oluştu: " . $stmtUpdatePayment->error;
-                            }
-
-                            $deileteTicket = "DELETE FROM tickets WHERE ticket_id = ? AND tcno = ?";
-                            $stmtTicket = $conn->prepare($deileteTicket);
-                            if ($stmtTicket === false) {
-                                die("Sorgu hazırlanırken bir hata oluştu: " . $conn->error);
-                            }
-                            $stmtTicket->bind_param("ss", $ticketID, $userTC);
-                            if ($stmtTicket->execute()) {
-                                return redirect()->to(site_url('index'));
-                            } else {
-                                echo "Sorgu çalıştırılırken bir hata oluştu: " . $stmt->error;
-                            }
-                        } else {
-                            echo "HATA";
-                        }
+                    // Güncelleme sorgusunu çalıştırma
+                    if ($updateStmt->execute()) {
+                        // Güncelleme başarılı ise ödeme sayfasına yönlendirme yapabilirsiniz
+                        return redirect()->to(site_url('payment?pid=' . $ticketID));
                     } else {
-                        echo "Ödeme sorgulanırken bir hata oluştu: " . $stmtPayment->error;
+                        // Güncelleme başarısız ise hata mesajı ver
+                        die("Güncelleme işlemi başarısız: " . $updateStmt->error);
                     }
                 } else {
-                    echo "HATA";
+                    return redirect()->to('index');
                 }
-            } else {
-                echo "Bilet sorgulanırken bir hata oluştu: " . $stmt->error;
             }
         }
+    }
+
+    public function DeleteTicket()
+    {
+        $ticketID = $this->request->getPost('ticketID');
+        $session = session();
+
+        if (!$session->has('auth_user')) {
+            return redirect()->to(site_url('login')); // Kullanıcı girişi kontrolü
+        }
+
+        $auth_user = $session->get('auth_user');
+        $userTC = $auth_user['TcKimlik'];
+
+        $db = db_connect(); // Veritabanı bağlantısı
+
+        // Biletin varlığını kontrol et
+        $ticket = $db->table('tickets')
+            ->where('ticket_id', $ticketID)
+            ->where('tcno', $userTC)
+            ->get()
+            ->getRow();
+
+        if (!$ticket) {
+            return "Bilet bulunamadı"; // Bilet yoksa işlem sonlandırılır.
+        }
+
+        // İlgili seferin fiyatını bul
+        $sefer = $db->table('seferler')
+            ->where('otobus_plaka', $ticket->otobus_plaka)
+            ->where('sefer_tarih', $ticket->kalkis_tarih)
+            ->get()
+            ->getRow();
+
+        // Bilet silme işlemi
+        $db->table('tickets')
+            ->where('ticket_id', $ticketID)
+            ->where('tcno', $userTC)
+            ->delete();
+
+        // Müşteri bakiyesini güncelle
+        $customerBalance = $db->table('balances')
+            ->where('TcKimlik', $userTC)
+            ->get()
+            ->getRow();
+        $newBalance = $customerBalance->TotalBalance + $sefer->sefer_fiyat;
+
+        $balanceData = [
+            'TotalBalance' => $newBalance,
+        ];
+
+        $db->table('balances')
+            ->where('TcKimlik', $userTC)
+            ->update($balanceData);
+
+        return redirect()->to(site_url('index')); // İşlem tamamlandıktan sonra ana sayfaya yönlendir
     }
 }
