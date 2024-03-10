@@ -80,6 +80,8 @@ $routes->get('adminUser', 'AdminController::adminUser');
     $routes->get('adminUser/delete/(:num)', 'AdminController::userDelete/$1');
     $routes->post('adminUser/update/(:num)', 'AdminController::userUpdate/$1');
 
+    $routes->get('pnr/generateQRCode/(:segment)', 'PnrController::generateQRCode/$1');
+
     
 
 

@@ -1,0 +1,406 @@
+INFO - 2024-03-10 17:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 17:48:45 --> ErrorException: Undefined array key "pnr_code"
+in APPPATH\Views\ticketDetail.php on line 109.
+ 1 APPPATH\Views\ticketDetail.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pnr_code"', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 109)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 17:48:45 --> ErrorException: Uncaught Error: Class "Locale" not found in D:\xampp\htdocs\bus\system\Helpers\number_helper.php:137
+Stack trace:
+#0 D:\xampp\htdocs\bus\system\Helpers\number_helper.php(56): format_number(8, 2, NULL, Array)
+#1 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(152): number_to_size(8, 2)
+#2 D:\xampp\htdocs\bus\app\Views\errors\html\error_exception.php(384): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(8388608)
+#3 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(258): include('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\bus\system\Debug\BaseExceptionHandler.php(261): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 D:\xampp\htdocs\bus\system\Debug\ExceptionHandler.php(112): CodeIgniter\Debug\BaseExceptionHandler->render(Object(ErrorException), 500, 'D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\bus\system\Debug\Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(ErrorException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#8 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Undefined array key "pnr_code"
+#0 D:\xampp\htdocs\bus\app\Views\ticketDetail.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 109)
+#1 D:\xampp\htdocs\bus\system\View\View.php(228): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bus\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bus\system\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', Array, true)
+#4 D:\xampp\htdocs\bus\app\Controllers\TicketDetail.php(34): view('ticketDetail', Array)
+#5 D:\xampp\htdocs\bus\system\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+#6 D:\xampp\htdocs\bus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+#7 D:\xampp\htdocs\bus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bus\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 137.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-10 17:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 17:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:20:42 --> ErrorException: Undefined variable $pnrCode
+in APPPATH\Views\ticketDetail.php on line 113.
+ 1 APPPATH\Views\ticketDetail.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pnrCode', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 113)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:20:49 --> ErrorException: Undefined variable $pnr_code
+in APPPATH\Views\ticketDetail.php on line 113.
+ 1 APPPATH\Views\ticketDetail.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pnr_code', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 113)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:20:50 --> ErrorException: Undefined variable $pnr_code
+in APPPATH\Views\ticketDetail.php on line 113.
+ 1 APPPATH\Views\ticketDetail.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pnr_code', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 113)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:21:08 --> ErrorException: Undefined variable $pnr_code
+in APPPATH\Views\ticketDetail.php on line 113.
+ 1 APPPATH\Views\ticketDetail.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pnr_code', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 113)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:26:49 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContenstType()
+in APPPATH\Controllers\PnrController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:26:58 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContenstType()
+in APPPATH\Controllers\PnrController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:26:59 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContenstType()
+in APPPATH\Controllers\PnrController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:27:00 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContenstType()
+in APPPATH\Controllers\PnrController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:29:08 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:30:26 --> Error: Call to undefined method Endroid\QrCode\QrCode::writeDataUri()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:33:05 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:33:06 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:34:51 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:36:16 --> Error: Class "App\Controllers\Png" not found
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:36:23 --> Error: Class "App\Controllers\Png" not found
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:36:48 --> Error: Call to undefined method Endroid\QrCode\QrCode::writeDataUri()
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:36:51 --> Error: Call to undefined method Endroid\QrCode\QrCode::writeDataUri()
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:37:34 --> Error: Class "App\Controllers\ImageRenderer" not found
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:37:39 --> Error: Class "App\Controllers\ImageRenderer" not found
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:37:40 --> Error: Class "App\Controllers\ImageRenderer" not found
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:39:58 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:40:01 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:40:02 --> Error: Call to undefined method Endroid\QrCode\QrCode::getContentType()
+in APPPATH\Controllers\PnrController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:41:16 --> Error: Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+in APPPATH\Controllers\PnrController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:41:18 --> Error: Class "Endroid\QrCode\ErrorCorrectionLevel" not found
+in APPPATH\Controllers\PnrController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:41:25 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 26.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 FCPATH\vendor\endroid\qr-code\src\Builder\Builder.php(232): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 3 APPPATH\Controllers\PnrController.php(22): Endroid\QrCode\Builder\Builder->build()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:41:32 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 26.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 FCPATH\vendor\endroid\qr-code\src\Builder\Builder.php(232): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 3 APPPATH\Controllers\PnrController.php(22): Endroid\QrCode\Builder\Builder->build()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:42:17 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 26.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 FCPATH\vendor\endroid\qr-code\src\Builder\Builder.php(232): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 3 APPPATH\Controllers\PnrController.php(22): Endroid\QrCode\Builder\Builder->build()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:42:19 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 26.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 FCPATH\vendor\endroid\qr-code\src\Builder\Builder.php(232): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 3 APPPATH\Controllers\PnrController.php(22): Endroid\QrCode\Builder\Builder->build()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-10 18:42:20 --> Exception: Unable to generate image: please check if the GD extension is enabled and configured correctly
+in FCPATH\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php on line 26.
+ 1 FCPATH\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 2 FCPATH\vendor\endroid\qr-code\src\Builder\Builder.php(232): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), null, null, [...])
+ 3 APPPATH\Controllers\PnrController.php(22): Endroid\QrCode\Builder\Builder->build()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('41ÖS09032024230949J41ABC21')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 18:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:54:43 --> ErrorException: Array to string conversion
+in APPPATH\Views\ticketDetail.php on line 124.
+ 1 APPPATH\Views\ticketDetail.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\xampp\\htdocs\\bus\\app\\Views\\ticketDetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 5 APPPATH\Controllers\TicketDetail.php(34): view('ticketDetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:58:19 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:58:21 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:58:29 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:58:29 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:59:31 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:59:31 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:59:46 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 18:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-10 18:59:47 --> ErrorException: foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\PnrController.php on line 17.
+ 1 APPPATH\Controllers\PnrController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\xampp\\htdocs\\bus\\app\\Controllers\\PnrController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PnrController->generateQRCode('İşlem Tarihi: 2024-03-09 23:10:01_Sefer Tarihi: 2024-04-18 13:00:00_İlk Durak: ISTANBUL_Son Durak: ISTANBUL_Alınan Koltuk: 3A, 6A, 7A, 11A_Bilet Tarihi: 2024-03-09 23:10:01_Araç Plaka: 41ABC21_PNR Kodu: 41ÖS09032024231001P41ABC21')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PnrController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-10 19:00:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-10 19:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

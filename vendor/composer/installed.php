@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/framework',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'c0210b0250ea205fde535c188a06bb0af36f0a9f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'bacon/bacon-qr-code' => array(
+            'pretty_version' => '2.0.8',
+            'version' => '2.0.8.0',
+            'reference' => '8674e51bb65af933a5ffaf1c308a660387c35c22',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bacon/bacon-qr-code',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'codeigniter/coding-standard' => array(
             'pretty_version' => 'v1.7.14',
             'version' => '1.7.14.0',
@@ -20,9 +29,9 @@
             'dev_requirement' => true,
         ),
         'codeigniter4/framework' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'c0210b0250ea205fde535c188a06bb0af36f0a9f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -55,6 +64,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'dasprid/enum' => array(
+            'pretty_version' => '1.0.5',
+            'version' => '1.0.5.0',
+            'reference' => '6faf451159fb8ba4126b925ed2d78acfce0dc016',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dasprid/enum',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'doctrine/instantiator' => array(
             'pretty_version' => '1.5.0',
             'version' => '1.5.0.0',
@@ -63,6 +81,15 @@
             'install_path' => __DIR__ . '/../doctrine/instantiator',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'endroid/qr-code' => array(
+            'pretty_version' => '4.8.2',
+            'version' => '4.8.2.0',
+            'reference' => '2436c2333a3931c95e2b96eb82f16f53143d6bba',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../endroid/qr-code',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'fakerphp/faker' => array(
             'pretty_version' => 'v1.23.1',
@@ -399,15 +426,6 @@
             'install_path' => __DIR__ . '/../sebastian/version',
             'aliases' => array(),
             'dev_requirement' => true,
-        ),
-        'stripe/stripe-php' => array(
-            'pretty_version' => 'v13.13.0',
-            'version' => '13.13.0.0',
-            'reference' => '8dc58bab25f222a74d1157d4ca9e9e48451dd0c1',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../stripe/stripe-php',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v5.4.36',
