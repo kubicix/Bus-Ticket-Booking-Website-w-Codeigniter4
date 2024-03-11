@@ -82,6 +82,6 @@ $routes->get('adminUser', 'AdminController::adminUser');
 
     $routes->get('pnr/generateQRCode/(:segment)', 'PnrController::generateQRCode/$1');
 
-    
-
+    $routes->get('/biletSorgu', 'TicketController::index');
+    $routes->post('/biletSorgu', 'TicketController::queryTicket');
 

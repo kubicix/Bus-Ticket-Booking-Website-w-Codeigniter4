@@ -19,6 +19,7 @@
     <li><a href="#">ONLİNE İŞLEMLER</a>
         <ul class="submenu dropdown-menu">
             <li><a class="dropdown-item" href="obilet">Online Bilet</a></li>
+            <li><a class="dropdown-item" href="biletSorgu">Bilet Sorgula</a></li>
             <?php if ($isLoggedIn): ?>
                 <li><a class="dropdown-item" href="<?= site_url('user') ?>">Hesabım</a></li>
             <?php else: ?>
