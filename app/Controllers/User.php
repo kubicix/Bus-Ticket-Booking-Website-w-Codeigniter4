@@ -30,9 +30,9 @@ class User extends Controller
             $model = new TicketModel();
 
             // Veritabanı bağlantısı için gerekli bilgiler
-            $servername = "localhost";
+            $servername = "mysql";
             $username = "root"; // Veritabanı kullanıcı adı
-            $password = ""; // Veritabanı şifresi
+            $password = "kubilay41"; // Veritabanı şifresi
             $dbname = "bus"; // Kullanılan veritabanı adı
 
             // Veritabanı bağlantısını oluşturma

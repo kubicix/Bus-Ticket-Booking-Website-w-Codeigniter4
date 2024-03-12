@@ -49,13 +49,13 @@ class Bilet extends Controller
         $tarih = $this->request->getPost('tarih');
 
         // Veritabanı bağlantısı için gerekli bilgiler
-        $servername = "localhost";
+        $servername = "mysql";
         $username = "root"; // Veritabanı kullanıcı adı
-        $password = ""; // Veritabanı şifresi
+        $password = "kubilay41"; // Veritabanı şifresi
         $dbname = "bus"; // Kullanılan veritabanı adı
 
         // Veritabanı bağlantısını oluşturma
-        $conn = new \mysqli($servername, $username, $password, $dbname);
+        $conn = new \mysqli($servername, $username, $password, $dbname,3306);
 
         // Bağlantıyı kontrol etme
         if ($conn->connect_error) {

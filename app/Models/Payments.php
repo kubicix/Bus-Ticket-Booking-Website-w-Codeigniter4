@@ -9,9 +9,9 @@ class Payment extends Model {
 
     public function __construct() {
         // Veritabanı bağlantısını oluştur
-        $servername = "localhost";
+        $servername = "mysql";
         $username = "root";
-        $password = ""; 
+        $password = "kubilay41"; 
         $dbname = "bus"; 
         $this->db = new \mysqli($servername, $username, $password, $dbname);
         if ($this->db->connect_error) {
@@ -22,6 +22,11 @@ class Payment extends Model {
     public function addPayment($data) {
         // Sorguyu hazırla
         $stmt = $this->db->prepare('INSERT INTO payments (TcKimlik, AdiSoyadi, email, StripeID, Product, Amount, Currency, Status, İlkDurak, SonDurak, SeferTarihi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+
+         // Check if prepare was successful
+         if (!$stmt) {
+            die("Prepare failed: " . htmlspecialchars($this->db->error));
+        }
         // Değerleri bağla
         $stmt->bind_param('sssssssssss', $data['TcKimlik'], $data['AdiSoyadi'], $data['email'], $data['StripeID'], $data['Product'], $data['Amount'], $data['Currency'], $data['Status'], $data['İlkDurak'], $data['SonDurak'], $data['SeferTarihi']);
     

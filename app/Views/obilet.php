@@ -514,13 +514,27 @@
             var xhr = new XMLHttpRequest();
             var url = "get_koltuk_listesi.php"; // Koltuk listesini getiren PHP dosyasının yolu
 
-            // İstek yapıldığında çalışacak fonksiyon
             xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Başarılı istek durumunda gelen verileri işleme
-                    var koltukListesi = JSON.parse(xhr.responseText);
-                    // Koltuk listesini işleme
-                    koltukListesiniIsle(koltukListesi);
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        try {
+                            // Konsola yanıtı yazdırarak ne döndüğünü görelim
+                            console.log("Response from server:", xhr.responseText);
+
+                            // JSON olarak parse etmeyi dene
+                            var koltukListesi = JSON.parse(xhr.responseText);
+
+                            // Koltuk listesini işle
+                            koltukListesiniIsle(koltukListesi);
+                        } catch (e) {
+                            // Parse işlemi sırasında bir hata oluşursa konsola yaz
+                            console.error("Parsing error:", e);
+                            // Hata mesajını burada daha fazla işleyebilirsiniz.
+                        }
+                    } else {
+                        // Sunucu tarafından hata kodu döndü
+                        console.error("Server responded with status code", xhr.status);
+                    }
                 }
             };
 
@@ -532,7 +546,7 @@
             var params = "plaka=" + plaka + "&tarih=" + tarih;
             xhr.send(params);
         }
-
+        
         function koltukListesiniIsle(koltukListesi) {
             // Butona basıldığında her sefer için ayrı olarak
             // Koltukları sıkıntısız çekebilmek için 

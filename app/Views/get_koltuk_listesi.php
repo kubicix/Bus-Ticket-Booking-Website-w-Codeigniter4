@@ -1,8 +1,8 @@
 <?php
 // Veritabanı bağlantısı için gerekli bilgiler
-$servername = "localhost";
+$servername = "mysql";
 $username = "root"; // Veritabanı kullanıcı adı
-$password = "qwertyu10"; // Veritabanı şifresi
+$password = "kubilay41"; // Veritabanı şifresi
 $dbname = "bus"; // Kullanılan veritabanı adı
 
 // POST isteği ile gelen parametreleri al
@@ -10,7 +10,7 @@ $otobus_plaka = $_POST['plaka'];
 $kalkis_tarih = $_POST['tarih'];
 
 // Veritabanına bağlanma
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname,3306);
 
 // Bağlantıyı kontrol etme
 if ($conn->connect_error) {

@@ -62,7 +62,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
       <!-- Google Maps API -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=API_KEYI_BURAYA_GIR&callback=initMap" defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfMukxs8krmb20PoUe-jeiRA8Kx5P3wEw&callback=initMap" defer></script>
       <script>
         // Google Maps API ile harita oluşturma fonksiyonu
         function initMap() {

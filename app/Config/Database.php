@@ -26,9 +26,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => 'mysql',
         'username'     => 'root',
-        'password'     => '',
+        'password'     => 'kubilay41',
         'database'     => 'bus',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3308,
+        'port'         => 3306,
         'numberNative' => false,
     ];
 

@@ -9,9 +9,9 @@ class GetCustomerBalance extends Model {
 
     public function __construct() {
         // Veritabanı bağlantısını oluştur
-        $servername = "localhost";
+        $servername = "mysql";
         $username = "root";
-        $password = ""; 
+        $password = "kubilay41"; 
         $dbname = "bus"; 
         $this->db = new \mysqli($servername, $username, $password, $dbname);
         if ($this->db->connect_error) {

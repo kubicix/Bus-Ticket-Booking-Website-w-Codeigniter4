@@ -202,7 +202,7 @@
     </script> -->
 
     <!-- API KEYİN ALINDIĞI KISIM GOOGLE API DAN ALINACAK VE GOOGLE MAP JAVASCRİPT ENABLE EDİLECEK -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY_BURAYA&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfMukxs8krmb20PoUe-jeiRA8Kx5P3wEw&callback=initMap"></script>
     <script src="../js/script.js"></script>
     <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -39,7 +39,7 @@ class Payment extends BaseController
                 $token = $POST['stripeToken'];
         
                 // Gelen ID değerine göre ürün bilgilerini bul
-                $conn = new \mysqli("localhost", "root", "", "bus");
+                $conn = new \mysqli("mysql", "root", "kubilay41", "bus");
                 if ($conn->connect_error) {
                     die("Veritabanına bağlanılamadı: " . $conn->connect_error);
                 }
