@@ -19,11 +19,11 @@ if (empty($tid) || empty($product)) {
 </head>
 <body>
 <div class="container mt-4">
-    <h2>Thank you for purchasing <?php echo $product; ?></h2>
+    <h2>Satın Alımınız için Teşekkürler<?php echo $product; ?></h2>
     <hr>
-    <p>Your transaction ID is <?php echo $tid; ?></p>
-    <p>Check your email for more info</p>
-    <p><a href="/" class="btn btn-light mt-2">Go Back</a></p>
+    <p>Sipariş Numaranız: <strong><?php echo $tid; ?> </strong></p>
+    <p>Daha detaylı bilgi için biletlerim sayfasına gidebilirsiniz.</p>
+    <p><a href="<?= base_url('points') ?>" class="btn btn-light mt-2">Biletlerime Git</a></p>
 </div>
 </body>
 </html>

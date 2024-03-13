@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/framework',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c0210b0250ea205fde535c188a06bb0af36f0a9f',
+        'reference' => '3a61fdeb76136cd4e90e53bc25303f813eeb8e27',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'codeigniter4/framework' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c0210b0250ea205fde535c188a06bb0af36f0a9f',
+            'reference' => '3a61fdeb76136cd4e90e53bc25303f813eeb8e27',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -426,6 +426,15 @@
             'install_path' => __DIR__ . '/../sebastian/version',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'stripe/stripe-php' => array(
+            'pretty_version' => 'v13.13.0',
+            'version' => '13.13.0.0',
+            'reference' => '8dc58bab25f222a74d1157d4ca9e9e48451dd0c1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stripe/stripe-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v5.4.36',

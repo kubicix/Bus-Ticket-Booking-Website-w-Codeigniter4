@@ -25,8 +25,12 @@ $routes->get('/services', 'Services::index');
 $routes->get('/user', 'User::index');
 $routes->post('/user', 'User::reserveTicket');
 $routes->get('/logout', 'Logout::index');
+
 $routes->get('/userInf', 'UserInf::index');
+$routes->post('/userInf', 'UserInf::update');
+
 $routes->get('/points', 'Points::index');
+
 
 $routes->get('obilet', 'Bilet::index');
 $routes->post('obilet', 'Bilet::seferleriListele');
