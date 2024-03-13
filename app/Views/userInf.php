@@ -121,6 +121,9 @@ include 'config.php';
                 <div class="col-md-3">Şehir</div>
                 <div class="col-md-9">
                     <select style="background-color:  lightgrey;" id="Il" name="Il" class="form-control">
+                    <option value="<?php echo $user['Il']; ?>">
+                                    <?php echo $user['Il']; ?>
+                                </option>
                         <option value="Adana">Adana</option>
                         <option value="Adıyaman">Adıyaman</option>
                         <option value="Afyonkarahisar">Afyonkarahisar</option>
