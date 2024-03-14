@@ -15,6 +15,10 @@ $routes->get('/contact2', 'Contact2::index');
 $routes->get('/register', 'Register::index');
 $routes->get('/account', 'Account::index');
 $routes->get('/resetPassword', 'ResetPassword::index');
+$routes->post('resetPassword/reset', 'ResetPassword::reset');
+$routes->get('/reset-password', 'ResetPassword::resetPass');
+$routes->post('/resetPassword/updatePassword', 'ResetPassword::updatePassword');
+
 $routes->get('/authcode', 'Authcode::index');
 $routes->get('/about', 'About::index');
 $routes->get('/IK', 'İK::index');
@@ -25,12 +29,8 @@ $routes->get('/services', 'Services::index');
 $routes->get('/user', 'User::index');
 $routes->post('/user', 'User::reserveTicket');
 $routes->get('/logout', 'Logout::index');
-
 $routes->get('/userInf', 'UserInf::index');
-$routes->post('/userInf', 'UserInf::update');
-
 $routes->get('/points', 'Points::index');
-
 
 $routes->get('obilet', 'Bilet::index');
 $routes->post('obilet', 'Bilet::seferleriListele');
@@ -80,12 +80,12 @@ $routes->get('adminPayment', 'AdminController::adminPayment');
 
 
 $routes->get('adminUser', 'AdminController::adminUser');
-    // $routes->post('adminUser/add', 'AdminController::userAdd');
-    $routes->get('adminUser/delete/(:num)', 'AdminController::userDelete/$1');
-    $routes->post('adminUser/update/(:num)', 'AdminController::userUpdate/$1');
+// $routes->post('adminUser/add', 'AdminController::userAdd');
+$routes->get('adminUser/delete/(:num)', 'AdminController::userDelete/$1');
+$routes->post('adminUser/update/(:num)', 'AdminController::userUpdate/$1');
 
-    $routes->get('pnr/generateQRCode/(:segment)', 'PnrController::generateQRCode/$1');
+$routes->get('pnr/generateQRCode/(:segment)', 'PnrController::generateQRCode/$1');
 
-    $routes->get('/biletSorgu', 'TicketController::index');
-    $routes->post('/biletSorgu', 'TicketController::queryTicket');
+$routes->get('/biletSorgu', 'TicketController::index');
+$routes->post('/biletSorgu', 'TicketController::queryTicket');
 
