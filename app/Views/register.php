@@ -1,41 +1,6 @@
 <?php
     include 'config.php';
 
-    if(isset($_POST['submit'])){
-        $AdiSoyadi = mysqli_real_escape_string($conn, $_POST['AdiSoyadi']);
-        $EMail = mysqli_real_escape_string($conn, $_POST['EMail']);
-        $TcKimlik = mysqli_real_escape_string($conn, $_POST['TcKimlik']);
-        $CepTelefon = mysqli_real_escape_string($conn, $_POST['CepTelefon']);
-        $Gun = mysqli_real_escape_string($conn, $_POST['Gun']);
-        $Ay = mysqli_real_escape_string($conn, $_POST['Ay']);
-        $Yil = mysqli_real_escape_string($conn, $_POST['Yil']);
-        $Il = mysqli_real_escape_string($conn, $_POST['Il']);
-        $Sifre = mysqli_real_escape_string($conn, $_POST['Sifre']);
-        $Sifre1 = mysqli_real_escape_string($conn, $_POST['Sifre1']);
-        $Cinsiyeti = mysqli_real_escape_string($conn, $_POST['Cinsiyeti']);
-
-        if(mysqli_num_rows(mysqli_query($conn,"SELECT * FROM users WHERE email ='{$EMail}'")) > 0){
-            $msg = "<div class = 'alert alert-danger'>{$EMail} - Bu eposta adresi kullanılmış.</div>";
-            
-        } else {
-            if($Sifre === $Sifre1){
-                $sql = "INSERT INTO users (AdiSoyadi, TcKimlik, CepTelefon, EMail, Gun, Ay, Yil, Il, Sifre, Cinsiyeti) VALUES ('{$AdiSoyadi}', '{$TcKimlik}', '{$CepTelefon}', '{$EMail}', '{$Gun}', '{$Ay}', '{$Yil}', '{$Il}', '{$Sifre}', '{$Cinsiyeti}')";
-                $result = mysqli_query($conn, $sql);
-
-                if($result){
-                    $successMsg = "Kayıt başarılı.";
-                    echo '<script type="text/javascript">';
-                    echo 'setTimeout(function () { window.location.href = "account.php"; }, 700);';
-                    echo '</script>';
-                } else{
-                    $errorMsg = "Kayıt başarısız. Girdiğiniz bilgileri kontrol edin.";
-                }
-            } else {
-                $errorMsg2 = "Şifreler Eşleşmiyor.";
-            }
-                
-        }
-    }
 ?>
 
 
@@ -78,7 +43,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6">
-                    <form action="" method="POST">
+                    <form action="<?= base_url('register') ?>" method="POST">
                         <div class="row" >
                             <div class="col-md-6">
                                 <label style="margin-top: 0;">Ad Soyad: </label>

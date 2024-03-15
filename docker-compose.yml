@@ -15,11 +15,8 @@ services:
   stripe:
     image: "stripe/stripe-cli:latest"
     network_mode: host
-    environment:
-        STRIPE_API_KEY: ${sk_test_51Oo8fYGwjXKy93pLK0VPzEzLDwJ7QhFwNkhy75zGGQSjpjNmZXPYREmuOWyiaQ0WGHciGgcOYSH1eJ4ldweSjl5g00GA3qVfDs}
-        STRIPE_DEVICE_NAME: ${STRIPE_DEVICE_NAME}
     command:
-        listen --forward-to localhost:8000/api/stripe/webhook
+        listen --forward-to localhost:8080/api/stripe/webhook
 
   mysql:
     image: mysql:5.7

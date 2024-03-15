@@ -29,7 +29,15 @@ RUN apt-get update && \
 RUN apt-get update && \
     apt-get install -y zip unzip git
 
+# Composer ile PHP Mailer'ı yükle
+RUN composer require phpmailer/phpmailer
 
+# Stripe CLI'ı yükle
+RUN curl -fsSL https://github.com/stripe/stripe-cli/releases/download/v1.5.0/stripe_1.5.0_linux_x86_64.tar.gz --output stripe.tar.gz \
+    && tar -xvf stripe.tar.gz \
+    && mv stripe /usr/local/bin/stripe \
+    && chmod +x /usr/local/bin/stripe \
+    && rm stripe.tar.gz
 
 # Çalışma dizinini ayarla
 WORKDIR /var/www/html
