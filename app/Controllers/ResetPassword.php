@@ -80,7 +80,7 @@ class ResetPassword extends Controller
         $token_hash = hash("sha256", $token);
 
         // MySQL bağlantısı oluşturma
-        $mysqli = new \mysqli("localhost", "root", "", "bus");
+        $mysqli = new \mysqli("mysql", "root", "kubilay41", "bus");
 
         $sql = "SELECT * FROM resetpassword
                 WHERE reset_token_hash = ?";

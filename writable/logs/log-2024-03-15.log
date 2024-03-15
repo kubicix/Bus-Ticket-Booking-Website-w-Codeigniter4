@@ -8,3 +8,229 @@ INFO - 2024-03-15 14:45:38 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-15 14:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-15 14:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-15 14:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 18:23:40 --> ErrorException: mysqli::__construct(): (HY000/2002): No such file or directory
+in APPPATH/Views/ticketDetail.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/2002): No such file or directory', '/var/www/html/app/Views/ticketDetail.php', 32)
+ 2 APPPATH/Views/ticketDetail.php(32): mysqli->__construct('localhost', 'root', '', 'bus')
+ 3 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/ticketDetail.php')
+ 4 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1178): CodeIgniter\View\View->render('ticketDetail', [], true)
+ 6 APPPATH/Controllers/TicketDetail.php(34): view('ticketDetail', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\TicketDetail->index()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TicketDetail))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-15 18:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 18:27:55 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 18:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 18:44:05 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 1A, 2A, 5A, 10A_Bilet Tarihi: 2024-03-09 23:09:13_Araç Plaka: 41ABC21_PNR Kodu: 41�S09032024230913S41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 18:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 18:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 18:54:30 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-03-15 18:58:42 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 18:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 19:01:44 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 19:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 19:03:34 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 19:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-15 19:08:07 --> ErrorException: Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded in /var/www/html/system/Format/JSONFormatter.php:43
+Stack trace:
+#0 /var/www/html/system/Format/JSONFormatter.php(43): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 /var/www/html/system/API/ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /var/www/html/system/API/ResponseTrait.php(98): CodeIgniter\Debug\ExceptionHandler->format(Array)
+#3 /var/www/html/system/Debug/ExceptionHandler.php(81): CodeIgniter\Debug\ExceptionHandler->respond(Array, 404)
+#4 /var/www/html/system/Debug/Exceptions.php(157): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\PageNotFoundException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 404, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\PageNotFoundException
+Can't find a route for 'get: pnr/generateQRCode/Sefer Tarihi: 2024-04-10 15:00:00_İlk Durak: ISTANBUL_Son Durak: ANTALYA_Alınan Koltuk: 40A_Bilet Tarihi: 2024-03-10 19:05:08_Araç Plaka: 41ABC21_PNR Kodu: 41�S10032024190508I41ABC21'.
+#0 /var/www/html/system/CodeIgniter.php(988): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Can't find a ro...')
+#1 /var/www/html/system/CodeIgniter.php(370): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 /var/www/html/index.php(79): CodeIgniter\CodeIgniter->run()
+#3 {main}
+in SYSTEMPATH/Format/JSONFormatter.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-15 19:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-15 19:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -49,7 +49,7 @@ class TicketDetail extends BaseController
         if ($session->has('auth_user')) {
             $auth_user = $session->get('auth_user');
             $userTC = $auth_user['TcKimlik'];
-            $conn = new \mysqli("localhost", "root", "", "bus");
+            $conn = new \mysqli("mysql", "root", "kubilay41", "bus");
             if ($conn->connect_error) {
                 die("Veritabanına bağlanılamadı: " . $conn->connect_error);
             }

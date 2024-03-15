@@ -25,6 +25,7 @@ class Register extends Controller
             'Ay' => $this->request->getPost('Ay'),
             'Yil' => $this->request->getPost('Yil'),
             'Il' => $this->request->getPost('Il'),
+            'Sifre' => $this->request->getPost('Sifre'),
             'Cinsiyeti' => $this->request->getPost('Cinsiyeti'),
             'is_admin' => 0 // Assuming default user is not an admin
         ];

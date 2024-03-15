@@ -214,7 +214,7 @@ include 'config.php';
                                 echo "<td>" . $row['Koltuk'] . "</td>"; // 'Koltuk' olarak değiştirildi
                                 echo "<td>" . $row['Bilet Tarihi'] . "</td>"; // 'Bilet Tarihi' olarak değiştirildi
                                 echo "<td>";
-                                echo "<form action='/bus/ticketDetail' method='GET'>";
+                                echo "<form action='ticketDetail' method='GET'>";
                                 echo "<input type='hidden' name='ticketID' value='" . $row['ticket id'] . "'>";
                                 echo "<button type='submit' class='btn btn-primary'>Detay</button>";
                                 echo "</form>";

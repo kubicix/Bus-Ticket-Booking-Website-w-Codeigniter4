@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,8 @@
         if ($session->has('auth_user')) {
             $auth_user = $session->get('auth_user');
             $userTC = $auth_user['TcKimlik'];
-            $conn = new \mysqli("localhost", "root", "", "bus");
+            $conn = new \mysqli("mysql", "root", "kubilay41", "bus");
+            $conn->set_charset("utf8mb4");
             if ($conn->connect_error) {
                 die("Veritabanına bağlanılamadı: " . $conn->connect_error);
             } else {
@@ -138,7 +139,7 @@
                     </div>
                     <?php
                 } else {
-                    ?>
+                    ?> 
                     <img src="<?= site_url('pnr/generateQRCode/' . $ticketDetails) ?>" alt="QR Code"
                     style="width: 200px; height: auto; display: block; margin: 0 auto;">
                     <!--BİLET EĞER REZERVE İSE BURADA İPTAL EDİLECEK VE SİLİNECEK-->
