@@ -1,4 +1,4 @@
-# 🎟️ Bus Ticket Booking Website with Codeigniter4 , MYSql and Docker
+# 🎟️ Bus Ticket Booking Website with Codeigniter4 , MYSql
 
 The Ticket Booking Website is a web application developed using CodeIgniter 4 (CI4) framework. It allows users to select seats on a bus seat map picker, make secure payments via Stripe payment system, manage their account, and reserve tickets.
 
