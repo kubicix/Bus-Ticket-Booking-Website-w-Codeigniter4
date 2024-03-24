@@ -37,6 +37,17 @@ The Ticket Booking Website is a web application developed using CodeIgniter 4 (C
 ###  Admin Panel 🧑‍💼
 - The application also includes an admin panel for managing users, bookings, and other administrative tasks.
 
+###  QR Code Ticket Verification 📱
+- Customers can view QR codes for their purchased tickets.
+- QR codes facilitate ticket validation by allowing passengers to display them when boarding the bus.
+- Bus staff can easily match the QR codes with the PNR codes to validate tickets.
+ 
+### Google Maps Integration for Route Visualization 🗺️
+- Users can view the departure and arrival points on Google Maps during the ticket purchasing process.
+- The selected departure and arrival points are dynamically plotted on the map using JavaScript.
+- This feature provides users with a visual representation of their journey route, enhancing their understanding of the trip's itinerary.
+
+
 ## 🚀 Getting Started
 
 1. Clone the repository:
