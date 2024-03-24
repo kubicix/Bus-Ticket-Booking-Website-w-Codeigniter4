@@ -35,7 +35,7 @@ The Ticket Booking Website is a web application developed using CodeIgniter 4 (C
 - Reserved tickets are automatically deleted if not purchased within 2 days, triggered by a database trigger.
 
 ###  Admin Panel 🧑‍💼
--The application also includes an admin panel for managing users, bookings, and other administrative tasks.
+- The application also includes an admin panel for managing users, bookings, and other administrative tasks.
 
 ## 🚀 Getting Started
 
