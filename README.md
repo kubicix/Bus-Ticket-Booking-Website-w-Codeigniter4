@@ -46,6 +46,11 @@ The Ticket Booking Website is a web application developed using CodeIgniter 4 (C
 - Users can view the departure and arrival points on Google Maps during the ticket purchasing process.
 - The selected departure and arrival points are dynamically plotted on the map using JavaScript.
 - This feature provides users with a visual representation of their journey route, enhancing their understanding of the trip's itinerary.
+  
+### Password Reset via Email 🔑📧
+- A "Forgot Password?" feature allows users to initiate the password reset process.
+- Users can reset their passwords through a password reset link sent to their email.
+- Upon request, an email containing a unique password reset link is sent to the user's registered email address.
 
 
 ## 🚀 Getting Started
