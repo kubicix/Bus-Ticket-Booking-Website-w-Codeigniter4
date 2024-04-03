@@ -52,6 +52,15 @@ The Ticket Booking Website is a web application developed using CodeIgniter 4 (C
 - Users can reset their passwords through a password reset link sent to their email.
 - Upon request, an email containing a unique password reset link is sent to the user's registered email address.
 
+## 📷 Screenshots 
+
+![routeshow](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/abe15a8c-ac95-4012-b5c7-72a14a541ab5)
+![seatmap](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/f4eb8d5a-e313-4d78-9f55-8faf510d0394)
+![stripepayment](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/69f8c13d-afc0-42d5-b138-09c66d38ecd5)
+![ticketdetail](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/d2ccc85c-3b47-45f5-a9d1-d1699d6208db)
+![ticketwithqrcode](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/2091025b-96d2-4365-af63-2c62f94f3f70)
+![userdetail](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/86691517-4769-4b8f-babc-ffd059d2f1d5)
+![adminpanel](https://github.com/kubicix/Bus-Ticket-Booking-Website-w-Codeigniter4/assets/96316375/651e566a-e7de-4c1a-891e-8096a9f703bd)
 
 ## 🚀 Getting Started
 
