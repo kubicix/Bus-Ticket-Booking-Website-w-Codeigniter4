@@ -67,13 +67,13 @@ The Ticket Booking Website is a web application developed using CodeIgniter 4 (C
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/ticket-booking-website.git
+    git clone https://github.com/Eozerr/bus_ticket
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd ticket-booking-website
+    cd bus_ticket
     ```
 
 3. Install dependencies:
